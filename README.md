@@ -1,4 +1,7 @@
 # PickAndDrink
+
+## Logo
+
 <img width="509" alt="로고_고화질" src="https://user-images.githubusercontent.com/77206786/146127609-6a1ffc1b-8a68-482d-ac5b-33a3f004b149.png">
 <br>
 
