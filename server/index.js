@@ -8,4 +8,8 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> bb3181ccc03348e37748a41c0bc7d5f5ae7ceff4
