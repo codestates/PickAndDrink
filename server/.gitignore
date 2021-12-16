@@ -3,6 +3,7 @@
 
 ### dotenv ###
 .env
+config/
 
 # dotenv environment variables file
 .env.production
