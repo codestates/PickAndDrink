@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     ranking: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'item',
+    underscored: true,
+    freezeTableName: true,
+    tableName: 'item',
   });
   return item;
 };

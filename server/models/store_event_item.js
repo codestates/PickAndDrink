@@ -18,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     // item_id: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'store_event_item',
+    underscored: true,
+    freezeTableName: true,
+    tableName: 'store_event_item',
   });
   return store_event_item;
 };
