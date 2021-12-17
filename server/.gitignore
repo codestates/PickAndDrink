@@ -10,9 +10,6 @@
 .env.development.local
 .env.production.local
 
-# Sequelize
-config/
-
 ### Node ###
 # Logs
 logs
