@@ -34,4 +34,30 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// association 설정
+// 1(user):N(like_comment)
+const {user, like_comment} = sequelize.models
+like_comment.belongsTo(user)
+user.hasMany(like_comment, {foreignKey: 'user_id'})
+
+// 1(item):N(like_comment)
+const {item, like_comment} = sequelize.models
+like_comment.belongsTo(item)
+item.hasMany(like_comment, {foreignKey: 'item_id'})
+
+// 1(category):N(item)
+const {item, category} = sequelize.models
+item.belongsTo(category)
+category.hasMany(item, {foreignKey: 'category_id'})
+
+// 1(category):N(item)
+const {item, store_event_item} = sequelize.models
+store_event_item.belongsTo(item)
+item.hasMany(store_event_item, {foreignKey: 'item_id'})
+
+// 1(category):N(item)
+const {store_event, store_event_item} = sequelize.models
+store_event_item.belongsTo(store_event)
+store_event.hasMany(store_event_item, {foreignKey: 'store_event_id'})
+
 module.exports = db;
