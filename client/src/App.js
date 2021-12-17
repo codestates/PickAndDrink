@@ -6,6 +6,7 @@ import Mypage from './pages/mypage';
 import Signup from './pages/signup';
 import Ranking from './pages/ranking';
 import Signin from './pages/signin';
+import Main from './pages/main'
 import axios from 'axios';
 import './App.css';
 
@@ -47,40 +48,16 @@ export default function App () {
   return ( // index페이지를 pages폴더에 넣어야하나?
     <div>
 
-      <BrowserRouter>
       <Routes>
-        <Route path='/login'>
-          <Login
-            isLogin={isLogin}
-            handleResponseSuccess={handleResponseSuccess}
-          />
-        </Route>
-
-        <Route exact path='/signin'>
-          <Signup isLogin={isLogin} />
-        </Route>
-
-        <Route exact path='/mypage'>
-          <Mypage userinfo={userinfo} handleLogout={handleLogout} />
-        </Route>
-
-        <Route exact path='/'>
-          <span>asdf</span>
-        </Route>
-
-        { /* <Route path='/'> 
-          {isLogin ? <Navigate to='/ranking' /> : <Navigate to='/login' />}
-        </Route>
-
-        <Route path='/'>
-          {isLogin ? <Navigate to='/mypage' /> : <Navigate to='/login' />}
-        </Route> */}
-
-        {/* root는 index페이지여야하지않을까? */}
-
+        <Route path="/" element={<Main />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/mypage" element={<Mypage />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
-      </ BrowserRouter>
-      
+
     </div>
   );
 }
@@ -95,6 +72,6 @@ export default function App () {
 // 68 ~ 74줄 무슨 코드인지
 
 // 해야할 것
-// page와 component의 분리
+// page와 component분리작업
 // page: 와이어 프레임에서 그린 page들
 // component: footer, header
