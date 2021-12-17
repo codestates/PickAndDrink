@@ -11,7 +11,7 @@ router.post('/auth/login', controllers.login)
 router.get('/auth/logout', controllers.logout)
 // router.get('/auth/me', controllers.me)
 router.post('/auth/signup', controllers.signup)
-// router.delete('/auth/signout', controllers.signout)
+router.delete('/auth/signout', controllers.signout)
 
 // //comment routing
 // router.get('/comment/:user-id', controllers.comment.getUserComment) // getUserComment 라는 함수명으로 가져오는 것으로 임시 작성
