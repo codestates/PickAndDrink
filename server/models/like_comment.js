@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     comment: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'like_comment',
+    underscored: true,
+    freezeTableName: true,
+    tableName: 'like_comment',
   });
   return like_comment;
 };
