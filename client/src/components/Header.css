@@ -1,0 +1,38 @@
+header {
+  width: 60%;
+  height: 50px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  margin: 0 auto 30px;
+}
+
+header div {
+  width: auto;
+  width: 80px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+header div:nth-child(2) {
+  text-align: center;
+  width: 300px;
+}
+
+nav {
+  width: 60%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 0 auto 40px;
+}
+
+nav div {
+  border: 1px solid black;
+  margin: 0 30px;
+}

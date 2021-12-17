@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px 0;
+}
+
+/*-------------- header ----------------*/
+
+header {
+  width: 60%;
+  height: 50px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  margin: 0 auto 30px;
+}
+
+header div {
+  width: auto;
+  width: 80px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+header div:nth-child(2) {
+  text-align: center;
+  width: 300px;
+}
+
+/*-------------- nav ----------------*/
+
+nav {
+  width: 60%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 0 auto 40px;
+}
+
+nav div {
+  border: 1px solid black;
+  margin: 0 30px;
+}
+
+/*-------------- banner ----------------*/
+
+#banner {
+  width: 60%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  border: 2px solid black;
+  margin: 0 auto 30px;
+}
+
+/*-------------- ranking List ----------------*/
+
+.rankingList {
+  width: 60%;
+  margin: 0 auto 30px;
+  border: 2px solid black;
+}
+
+.rankingList div {
+  text-align: center;
+}
+
+.rankingList section {
+  height: 700px;
+}
+
+.test { /* 픽냥이's 랭킹 pick */
+  width: 150px;
+  height: 35px;
+  border: 1px solid black;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 20px 0;
+}
+
+.rankItemContainer { /* 랭킹박스 한개한개를 감싸고있는 container */
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0px solid black;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.rankingList article { /* 랭킹박스 한개 한개 container*/
+  margin: 5px auto;
+  width: 30%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.rankingList img { /* 랭킹박스안 img */
+  display: block;
+  width: 95%;
+  height: 80%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.rankItemContainer div { /* 탄산음료 1등 */
+  width: auto;
+  margin-top: 10px;
+}
+
+/*-------------- sale List ----------------*/
+
+.saleList {
+  width: 60%;
+  margin: 0 auto 30px;
+  border: 2px solid black;
+}
+
+.saleList div {
+  text-align: center;
+}
+
+.saleList section {
+  height: 700px;
+}
+
+.test { /* 할인이 곧 끝나요 */
+  width: 150px;
+  height: 35px;
+  border: 1px solid black;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 20px 0;
+}
+
+.saleContainer { /* 랭킹박스 한개한개를 감싸고있는 container */
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0px solid black;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.saleList article { /* 랭킹박스 한개 한개 container*/
+  margin: 5px auto;
+  width: 30%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.saleList img { /* 랭킹박스안 img */
+  display: block;
+  width: 95%;
+  height: 80%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.saleContainer div { /* 탄산음료 1등 */
+  width: auto;
+  margin-top: 10px;
+}
+
+/*-------------- footer ----------------*/
+
+footer {
+  width: 99%;
+  height: 80px;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 70px;
+  margin: 0 auto;
+}
