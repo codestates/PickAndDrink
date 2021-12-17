@@ -5,7 +5,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.json')[env];
+const config = require(__dirname + '/../config/config.js')[env];  //! 이부분 수정함 .json -> .js
 const db = {};
 
 let sequelize;
@@ -36,27 +36,28 @@ db.Sequelize = Sequelize;
 
 // association 설정
 // 1(user):N(like_comment)
-const {user, like_comment} = sequelize.models
+// ! const는 상수이므로, 한번만 변수 선언해야함. 해당 부분 수정
+const {user, item, like_comment, category, store_event_item, store_event} = sequelize.models
 like_comment.belongsTo(user)
 user.hasMany(like_comment, {foreignKey: 'user_id'})
 
 // 1(item):N(like_comment)
-const {item, like_comment} = sequelize.models
+// const {item, like_comment} = sequelize.models
 like_comment.belongsTo(item)
 item.hasMany(like_comment, {foreignKey: 'item_id'})
 
 // 1(category):N(item)
-const {item, category} = sequelize.models
+// const {item, category} = sequelize.models
 item.belongsTo(category)
 category.hasMany(item, {foreignKey: 'category_id'})
 
 // 1(category):N(item)
-const {item, store_event_item} = sequelize.models
+// const {item, store_event_item} = sequelize.models
 store_event_item.belongsTo(item)
 item.hasMany(store_event_item, {foreignKey: 'item_id'})
 
 // 1(category):N(item)
-const {store_event, store_event_item} = sequelize.models
+// const {store_event, store_event_item} = sequelize.models
 store_event_item.belongsTo(store_event)
 store_event.hasMany(store_event_item, {foreignKey: 'store_event_id'})
 
