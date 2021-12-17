@@ -18,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     event_info: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'store_event',
+    underscored: true,
+    freezeTableName: true,
+    tableName: 'store_event',
   });
   return store_event;
 };

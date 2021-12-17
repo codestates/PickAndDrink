@@ -3,9 +3,23 @@ const { user } =require('../../models')
 require('dotenv').config()
 
 module.exports = async (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
 
-    res.send('ok');
+    const userInfo = await user.findOne({
+        where : {email: req.body.email, password: req.body.password}
+      })
+
+    if(!userInfo){
+        res.status(401).send({ "message": "Worng ID or Password" })
+    }
+    
+    else{
+        console.log(userInfo.dataValues);
+        
+        res.send('ok');
+    }
+    
+    
 
 
 
