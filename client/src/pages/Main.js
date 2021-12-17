@@ -1,14 +1,14 @@
 // import React, { useState } from 'react';
 import axios from 'axios';
-import React from 'react'
 
 axios.defaults.withCredentials = true;
 
-export default function Event () { 
+function Main (props) { 
     return (
       <div>
-       <h1>1234</h1>
+       <h1>main</h1>
       </div>
     );
   }
- 
+  
+  export default Main;
