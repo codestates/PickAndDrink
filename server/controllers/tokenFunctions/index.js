@@ -13,11 +13,11 @@ module.exports = {
 
     // 회원가입/로그인 시 최초 액세스 토큰 발급
     mkAccessToken: (data) => {
-        return sign(data, process.env.ACCESS_SECRET, {expiresIn: "15s"})
+        return sign(data, process.env.ACCESS_SECRET, {expiresIn: "15m"})
     },
     // 회원가입/로그인 시 최초 리프레시 토큰 발급
     mkRefreshToken: (data) => {
-        return sign(data, process.env.REFRESH_SECRECT, {expiresIn: "14d"})
+        return sign(data, process.env.REFRESH_SECRET, {expiresIn: "14d"})
     },
     // 리프레시 토큰을 cookie에 저장해 반환
     sendRefreshToken: (res, refreshToken) => {
@@ -36,14 +36,15 @@ module.exports = {
     },
     // chkValid 함수 > null 반환은 falsy
     chkValid: (req) => {
-        const auth = req.headers['auth']
+        const authorization = req.headers['authorization']
         // auth 가 존재하는지 여부 체크: null이면 401 unauthroized
-        if (!auth) return null
+        if (!authorization) return null
 
-        const token = auth.split[' '][1] // token은 Bearer ~~~로 작성되었음
+        const token = authorization // token은 Bearer ~~~로 작성되었음
         try { 
             return verify(token, process.env.ACCESS_SECRET)
         } catch(err) {
+            console.log("액세스 토큰 확인 에러")
             return null 
         }
     },
