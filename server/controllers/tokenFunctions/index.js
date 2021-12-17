@@ -29,7 +29,7 @@ module.exports = {
     sendAccessToken: (res, accessToken) => {
         res.json({data: {accessToken}, message: 'ok'})
     },
-    // myPage진입 시 토큰 인증 및 userdata 반환
+    // myPage진입 시 토큰 인증 및 userdata 반환 > 
     getMypage: (res, accessToken, data) => {
         res.json({ data: { accessToken, userInfo: data }, message: "ok" });
         // userdata 전송 및 accessToken 갱신
