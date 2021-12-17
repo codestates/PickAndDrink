@@ -3,7 +3,7 @@ const { user } =require('../../models')
 require('dotenv').config()
 
 module.exports = async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
 
     const userInfo = await user.findOne({
         where : {email: req.body.email, password: req.body.password}
@@ -15,7 +15,13 @@ module.exports = async (req, res) => {
     
     else{
         console.log(userInfo.dataValues);
-        
+        const {email, nickname } = userInfo.dataValues;
+        const payLoad = {email , nickname}
+
+        // 페이로드를 토큰에 data로 담아서 돌려야 하니깐
+        // acessToken
+
+
         res.send('ok');
     }
     
