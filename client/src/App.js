@@ -10,40 +10,40 @@ import Main from './pages/main'
 import axios from 'axios';
 import './App.css';
 
-import Header from './components/Header';
+
 
 export default function App () {
   
-  const [isLogin, setIsLogin] = useState(false);
-  const [userinfo, setUserinfo] = useState(null);
-  const history = useNavigate();
-  const isAuthenticated = () => {
-    axios
-      .get("https://localhost:3000") 
-      .then((res) => {
-        setIsLogin(true); 
-        setUserinfo(res.data.data.userInfo); 
-        history.push("/");
-      })
-      .catch((err) => {
-        console.log("토큰이 만료 되었습니다. 다시 로그인 해 주세요.")
-      });
-    // TODO: 이제 인증은 성공했습니다. 사용자 정보를 호출하고, 이에 성공하면 로그인 상태를 바꿉시다.
-  };
-  const handleResponseSuccess = () => {
-    isAuthenticated();
-  };
-  const handleLogout = () => {
-    axios.post('https://localhost:3000/signout').then((res) => {
-      setUserinfo(null);
-      setIsLogin(false);
-      history.push('/');
-    });
-  };
+  // const [isLogin, setIsLogin] = useState(false);
+  // const [userinfo, setUserinfo] = useState(null);
+  // const history = useNavigate();
+  // const isAuthenticated = () => {
+  //   axios
+  //     .get("https://localhost:3000") 
+  //     .then((res) => {
+  //       setIsLogin(true); 
+  //       setUserinfo(res.data.data.userInfo); 
+  //       history.push("/");
+  //     })
+  //     .catch((err) => {
+  //       console.log("토큰이 만료 되었습니다. 다시 로그인 해 주세요.")
+  //     });
+  //   // TODO: 이제 인증은 성공했습니다. 사용자 정보를 호출하고, 이에 성공하면 로그인 상태를 바꿉시다.
+  // };
+  // const handleResponseSuccess = () => {
+  //   isAuthenticated();
+  // };
+  // const handleLogout = () => {
+  //   axios.post('https://localhost:3000/signout').then((res) => {
+  //     setUserinfo(null);
+  //     setIsLogin(false);
+  //     history.push('/');
+  //   });
+  // };
 
-  useEffect(() => {
-    isAuthenticated();
-  }, []);
+  // useEffect(() => {
+  //   isAuthenticated();
+  // }, []);
 
   return ( // index페이지를 pages폴더에 넣어야하나?
     <div>
