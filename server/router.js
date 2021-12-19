@@ -18,7 +18,7 @@ router.delete('/auth/signout', controllers.signout)
 // router.get('/comment/:item-id', controllers.comment.getItemComment) // getItemComment 라는 함수명으로 가져오는 것으로 임시 작성
 
 // //item routing
-// router.get('/item', controllers.item.sortByRanking) // 기본값? 기본메서드 같은 느낌?
+router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느낌?
 // router.get('/item', controllers.item.findByType)
 // router.get('/item', controllers.item.findByStore)
 // router.get('/item', controllers.item.findByEvent)
