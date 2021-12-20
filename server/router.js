@@ -28,12 +28,14 @@ router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느�
 // router.put('/item/:item-id/comment/:comment-id', controllers.item.putComment) //! API 문서 보완 필요
 // router.delete('/item/:item-id/comment/:comment-id', controllers.item.deleteComment)  //! 뭔가 API쪽의 보완 작업이 필요할 것으로 생각됨 
 
-// // like routing
-// !API 문서 보완 필요할듯?
-router.get('/like', controllers.like.findLike)    //! 해당 메서드는 로직 고민이 필요
-// // 특정 사용자가 좋아요 누른 아이템 목록들을 전체 조회??가 필요?
-// router.post('/item/:item-id/like', controllers.like.postLike)
-// router.delete('/item/:item-id/like', controllers.like.deleteLike)
+// like routing
+// 해당 유저가 좋아요 누른 전체 상품 조회(출력)
+router.get('/like', controllers.like.findLike)
+// 여기서 id는 item_id를 뜻함
+// 해당 상품에 대한 좋아요 버튼 클릭시 좋아요/좋아요 취소 한번에 동작하도록 로직 구현
+router.post('/like/:id', controllers.like.postLike)
+// delete 구문은 필요없음
+// router.delete('/item/:id/like', controllers.like.deleteLike)
 
 
 
