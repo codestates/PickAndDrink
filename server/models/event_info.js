@@ -3,19 +3,18 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class store_event_item extends Model {
+  class event_info extends Model {
     static associate(models) {}
   };
-  store_event_item.init({
-    item_id: DataTypes.INTEGER,
-    store_id: DataTypes.INTEGER,
-    event_id: DataTypes.INTEGER,
+  event_info.init({
+    info: DataTypes.STRING,
+    discount: DataTypes.INTEGER
   }, {
     sequelize,
     underscored: true,
     freezeTableName: true,
-    tableName: 'store_event_item',
+    tableName: 'event_info',
     timestamps: false
   });
-  return store_event_item;
+  return event_info;
 };
