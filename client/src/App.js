@@ -1,13 +1,13 @@
-// import React, { useEffect, useState } from 'react';
-import { Routes,Route } from 'react-router-dom';
-import Event from './pages/Event';
-import Login from './pages/Login';
-import Mypage from './pages/Mypage';
-import Signup from './pages/Signup';
-import Ranking from './pages/Ranking';
-import Signin from './pages/Signin';
-import Main from './pages/Main';
-// import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useNavigate, Navigate, BrowserRouter, Link } from 'react-router-dom';
+import Event from './pages/event';
+import Login from './pages/login';
+import Mypage from './pages/mypage';
+import Signup from './pages/signup';
+import Ranking from './pages/ranking';
+import Signin from './pages/signin';
+import Main from './pages/main'
+import axios from 'axios';
 import './App.css';
 
 
@@ -46,7 +46,8 @@ export default function App () {
   // }, []);
 
   return ( // index페이지를 pages폴더에 넣어야하나?
-    <div>
+    <div id ="body">
+
       <Routes>
         <Route path='/login'element={<Login/>} />
         <Route path='/'element={<Main/>} />
@@ -56,6 +57,7 @@ export default function App () {
         <Route path='/signin'element={<Signin/>} />
         <Route path='/signup'element={<Signup/>} />
       </Routes>
+
     </div>
   );
 }
@@ -70,6 +72,6 @@ export default function App () {
 // 68 ~ 74줄 무슨 코드인지
 
 // 해야할 것
-// page와 component의 분리
+// page와 component분리작업
 // page: 와이어 프레임에서 그린 page들
 // component: footer, header

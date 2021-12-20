@@ -1,14 +1,10 @@
-// import React, { useState } from 'react';
-import axios from 'axios';
+import React from "react"; 
 
-axios.defaults.withCredentials = true;
+export default function Signin() {
 
-function Singin (props) { 
-    return (
-      <div>
-       <h1>signin</h1>
-      </div>
-    );
-  }
-  
-  export default Singin;
+  return (
+    <div>
+      signin
+    </div>
+  )
+}

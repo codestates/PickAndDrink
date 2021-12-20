@@ -1,15 +1,10 @@
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React from "react"; 
 
-axios.defaults.withCredentials = true;
+export default function Ranking() {
 
-function Ranking (props) { 
-    return (
-      <div>
-       <h1>1234</h1>
-      </div>
-    );
-  }
-  
-  export default Ranking;
+  return (
+    <div>
+      ranking
+    </div>
+  )
+}
