@@ -13,7 +13,7 @@ module.exports = {
 
     // 회원가입/로그인 시 최초 액세스 토큰 발급
     mkAccessToken: (data) => {
-        return sign(data, process.env.ACCESS_SECRET, {expiresIn: "15m"})
+        return sign(data, process.env.ACCESS_SECRET, {expiresIn: "2h"})
     },
     // 회원가입/로그인 시 최초 리프레시 토큰 발급
     mkRefreshToken: (data) => {
