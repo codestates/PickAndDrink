@@ -50,6 +50,7 @@ module.exports = {
         }
     },
 
+    
     postLike: async (req, res) => {
 
         if(!req.headers.authorization){
@@ -83,7 +84,7 @@ module.exports = {
                             where: {user_id: accessTokenData.id, item_id:itemId}
                         })
                         // item 테이블의 ranking count 값 증가시킴
-                        await item.update({ranking: itemInfo.ranking+1}, {
+                        await item.update({ranking_count: itemInfo.ranking_count+1}, {
                             where: {id:itemId}
                         })
                         res.status(200).send({message: "push like"})
@@ -93,7 +94,7 @@ module.exports = {
                             where: {user_id: accessTokenData.id, item_id:itemId}
                         })
                         // item 테이블의 ranking count 값 감소시킴
-                        await item.update({ranking: itemInfo.ranking-1}, {
+                        await item.update({ranking_count: itemInfo.ranking_count-1}, {
                             where: {id:itemId}
                         })
                         res.status(200).send({message: "cancel like"})
@@ -108,7 +109,7 @@ module.exports = {
                             item_id:itemId,
                         })
                         // item 테이블의 ranking count 값 증가시킴
-                        await item.update({ranking: itemInfo.ranking+1}, {
+                        await item.update({ranking_count: itemInfo.ranking_count+1}, {
                             where: {id:itemId}
                         })
                         res.status(201).send({message: "add like"})
