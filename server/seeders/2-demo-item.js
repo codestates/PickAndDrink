@@ -8,7 +8,7 @@ module.exports = {
         price: 1900,
         img: "dummyImg",
         ranking: 0,
-        category_id: 1,
+        category: "탄산음료",
         created_at: new Date(),
         updated_at: new Date()
       },
@@ -17,7 +17,7 @@ module.exports = {
         price: 1200,
         img: "dummyImg",
         ranking: 0,
-        category_id: 2,
+        category: "차",
         created_at: new Date(),
         updated_at: new Date()
       },
@@ -26,7 +26,7 @@ module.exports = {
         price: 900,
         img: "dummyImg",
         ranking: 0,
-        category_id: 3,
+        category: "커피",
         created_at: new Date(),
         updated_at: new Date()
       },

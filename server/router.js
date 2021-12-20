@@ -19,10 +19,7 @@ router.delete('/auth/signout', controllers.signout)
 
 // //item routing
 router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느낌?
-<<<<<<< HEAD
-=======
 // router.get('/item', controllers.item.sortByRanking) // 기본값? 기본메서드 같은 느낌?
->>>>>>> 797fd3522648d1214f2fed45fc5f38e394688b38
 // router.get('/item', controllers.item.findByType)
 // router.get('/item', controllers.item.findByStore)
 // router.get('/item', controllers.item.findByEvent)

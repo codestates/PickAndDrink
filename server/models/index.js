@@ -48,8 +48,8 @@ item.hasMany(like_comment, {foreignKey: 'item_id'})
 
 // 1(category):N(item)
 // const {item, category} = sequelize.models
-item.belongsTo(category)
-category.hasMany(item, {foreignKey: 'category_id'})
+// item.belongsTo(category)
+// category.hasMany(item, {foreignKey: 'category_id'})
 
 
 // 추가된 내용

@@ -17,9 +17,9 @@ module.exports = {
       img: {
         type: Sequelize.STRING
       },
-      // category_id: {
-      //   type: Sequelize.INTEGER
-      // },
+      category: {
+        type: Sequelize.STRING
+      },
       ranking: {
         type: Sequelize.INTEGER
       },

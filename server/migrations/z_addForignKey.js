@@ -6,7 +6,7 @@ module.exports = {
     // await queryInterface.addColumn('대상 테이블', '생성할 컬럼이름', Sequelize.INTEGER);
     await queryInterface.addColumn('like_comment', 'user_id', Sequelize.INTEGER)
     await queryInterface.addColumn('like_comment', 'item_id', Sequelize.INTEGER)
-    await queryInterface.addColumn('item', 'category_id', Sequelize.INTEGER)
+    // await queryInterface.addColumn('item', 'category_id', Sequelize.INTEGER) // 수정: 카테고리 테이블 삭제에 따른 주석처리
     await queryInterface.addColumn('store_event_item', 'item_id', Sequelize.INTEGER)
     await queryInterface.addColumn('store_event_item', 'store_event_id', Sequelize.INTEGER)
 
@@ -44,17 +44,17 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade'
     })
-    await queryInterface.addConstraint('item', {
-      fields: ['category_id'],
-      type: 'foreign key',
-      name: 'FK_category_id',
-      references: {
-        table: 'category',
-        field: 'id'
-      },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
-    })
+    // await queryInterface.addConstraint('item', {
+    //   fields: ['category_id'],
+    //   type: 'foreign key',
+    //   name: 'FK_category_id',
+    //   references: {
+    //     table: 'category',
+    //     field: 'id'
+    //   },
+    //   onDelete: 'cascade',
+    //   onUpdate: 'cascade'
+    // })
     await queryInterface.addConstraint('store_event_item', {
       fields: ['item_id'],
       type: 'foreign key',
@@ -82,14 +82,14 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.removeConstraint('like_comment', 'FK_user_id');
-    await queryInterface.removeConstraint('like_comment', 'FK_category_id');
+    // await queryInterface.removeConstraint('like_comment', 'FK_category_id');
     await queryInterface.removeConstraint('item', 'FK_item_id');
     await queryInterface.removeConstraint('store_event_item', 'store_event_item_id')
     await queryInterface.removeConstraint('store_event_item', 'FK_store_event_id')
 
     await queryInterface.removeColumn('like_comment', 'user_id');
     await queryInterface.removeColumn('like_comment', 'item_id')
-    await queryInterface.removeColumn('item', 'category_id');
+    // await queryInterface.removeColumn('item', 'category_id');
     await queryInterface.removeColumn('store_event_item', 'item_id');
     await queryInterface.removeColumn('store_event_item', 'store_event_id')
   }

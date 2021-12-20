@@ -21,14 +21,12 @@
         //! 변경된 부분(raw query 사용)
         const itemData = await sequelize.query(
             `SELECT
-                item.id, item.name, item.price, category.name as category, item.img, item.ranking, store_name, event_info 
+                item.id, item.name, item.price, category, item.img, item.ranking, store_name, event_info 
             FROM
-                item INNER JOIN category 
-                INNER JOIN store_event_item 
+                item INNER JOIN store_event_item 
                 INNER JOIN store_event
             WHERE
                 item.id = store_event_item.item_id 
-                AND item.category_id = category.id 
                 AND store_event_item.store_event_id = store_event.id 
             ORDER BY item.ranking
             `,
