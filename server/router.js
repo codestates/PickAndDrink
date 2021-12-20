@@ -9,7 +9,7 @@ require('dotenv').config()
 // auth routing
 router.post('/auth/login', controllers.login)
 router.get('/auth/logout', controllers.logout)
-// router.get('/auth/me', controllers.me)
+router.get('/auth/me', controllers.me)
 router.post('/auth/signup', controllers.signup)
 router.delete('/auth/signout', controllers.signout)
 
@@ -19,6 +19,10 @@ router.delete('/auth/signout', controllers.signout)
 
 // //item routing
 router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느낌?
+<<<<<<< HEAD
+=======
+// router.get('/item', controllers.item.sortByRanking) // 기본값? 기본메서드 같은 느낌?
+>>>>>>> 797fd3522648d1214f2fed45fc5f38e394688b38
 // router.get('/item', controllers.item.findByType)
 // router.get('/item', controllers.item.findByStore)
 // router.get('/item', controllers.item.findByEvent)
@@ -27,14 +31,14 @@ router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느�
 // router.put('/item/:item-id/comment/:comment-id', controllers.item.putComment) //! API 문서 보완 필요
 // router.delete('/item/:item-id/comment/:comment-id', controllers.item.deleteComment)  //! 뭔가 API쪽의 보완 작업이 필요할 것으로 생각됨 
 
-// router.get('/item/:user-id/like', controllers.item.findLike)    //! 해당 메서드는 로직 고민이 필요
-// // 특정 사용자가 좋아요 누른 아이템 목록들을 전체 조회??가 필요?
-// router.post('/item/:item-id/like', controllers.item.postLike)
-// router.delete('/item/:item-id/like', controllers.item.deleteLike)
-
-
 // // like routing
 // !API 문서 보완 필요할듯?
+router.get('/like', controllers.like.findLike)    //! 해당 메서드는 로직 고민이 필요
+// // 특정 사용자가 좋아요 누른 아이템 목록들을 전체 조회??가 필요?
+// router.post('/item/:item-id/like', controllers.like.postLike)
+// router.delete('/item/:item-id/like', controllers.like.deleteLike)
+
+
 
 
 router.get('/', (req, res) => {
