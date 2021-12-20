@@ -49,7 +49,7 @@ export default function App () {
     <div>
       <Routes>
         <Route path='/login'element={<Login/>} />
-        <Route path='/main'element={<Main/>} />
+        <Route path='/'element={<Main/>} />
         <Route path='/mypage'element={<Mypage/>} />
         <Route path='/event'element={<Event/>} />
         <Route path='/ranking'element={<Ranking/>} />
