@@ -46,7 +46,7 @@ export default function App () {
   // }, []);
 
   return ( // index페이지를 pages폴더에 넣어야하나?
-    <div>
+    <div id ="body">
 
       <Routes>
         <Route path="/" element={<Main />} />

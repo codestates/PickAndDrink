@@ -1,13 +1,16 @@
-import React from "react"; 
+import React from "react";
 import Header from "../components/Header";
-import Banner from "../components/Banner"
+import Banner from "../components/Banner";
+import ItemMain from "../components/ItemMain";
+import Footer from "../components/Footer";
 
 export default function Main() {
-
   return (
     <div>
+      <Header />
       <Banner />
-      Main페이지
+      <ItemMain />
+      <Footer />
     </div>
-  )
+  );
 }
