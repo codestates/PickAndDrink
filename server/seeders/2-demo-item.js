@@ -7,7 +7,7 @@ module.exports = {
         name: "제로콜라",
         price: 1900,
         img: "dummyImg",
-        ranking: 0,
+        ranking_count: 0,
         category: "탄산음료",
         created_at: new Date(),
         updated_at: new Date()
@@ -16,7 +16,7 @@ module.exports = {
         name: "보성녹차",
         price: 1200,
         img: "dummyImg",
-        ranking: 0,
+        ranking_count: 0,
         category: "차",
         created_at: new Date(),
         updated_at: new Date()
@@ -25,7 +25,7 @@ module.exports = {
         name: "칸타타",
         price: 900,
         img: "dummyImg",
-        ranking: 0,
+        ranking_count: 0,
         category: "커피",
         created_at: new Date(),
         updated_at: new Date()

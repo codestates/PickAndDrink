@@ -17,11 +17,11 @@ module.exports = {
       img: {
         type: Sequelize.STRING
       },
+      ranking_count : {
+        type: Sequelize.INTEGER
+      },
       category: {
         type: Sequelize.STRING
-      },
-      ranking: {
-        type: Sequelize.INTEGER
       },
       created_at: {
         allowNull: false,

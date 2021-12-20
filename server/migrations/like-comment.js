@@ -1,17 +1,24 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('store_event', {
+    await queryInterface.createTable('like_comment', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      store_name: {
-        type: Sequelize.STRING
+      user_id: {
+        type: Sequelize.INTEGER
       },
-      event_info: {
+      item_id: {
+        type: Sequelize.INTEGER
+      },
+      like: {
+        type: Sequelize.TINYINT,
+        defaultValue: 0
+      },
+      comment: {
         type: Sequelize.STRING
       },
       created_at: {
@@ -27,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('store_event');
+    await queryInterface.dropTable('like_comment');
   }
 };
