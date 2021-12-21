@@ -22,7 +22,7 @@ function Header() {
           ></input>
         </div>
 
-        <Link to="signup">
+        <Link to="/signup">
           <div id="signup">signup</div>
         </Link>
       </header>

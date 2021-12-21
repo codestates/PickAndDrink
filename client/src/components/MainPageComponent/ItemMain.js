@@ -13,7 +13,7 @@ function ItemMain() {
       <div id="rankContainer">
         <h1 className='mainH'>픽냥이's 랭킹 Pick</h1>
         <section id="rankList">
-          {items.map((item) => <Item item={item} />)}
+          {items.map((item) => <Item key={item.id} item={item} />)}
         </section>
       </div>
 
@@ -21,7 +21,7 @@ function ItemMain() {
       <div id="saleContainer">
         <h1 className='mainH'>할인이 곧 끝나요❗</h1>
         <section id="saleList">
-          {sales.map((sale) => <Sale sale={sale} />)}
+          {sales.map((sale) => <Sale key={sale.id} sale={sale} />)}
         </section>
       </div>
     </div>

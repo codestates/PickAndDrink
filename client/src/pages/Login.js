@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import '../pages/Login.css'
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 axios.defaults.withCredentials = true;
 
@@ -29,27 +31,28 @@ export default function Login () {
     // TODO : 이메일 및 비밀번호를 입력하지 않았을 경우 에러를 표시해야 합니다.
   // };
   return (
-    <div>
-      <center>
-        <h1>Sign In</h1>
-          <div>
-            <span>이메일</span>
-            <input type='email'/>
-          </div>
-          <div>
-            <span>비밀번호</span>
-            <input
-              type='password'
-            />
-          </div>
-          <div>
-            {/* <Link to='/signup'>회원가입을 하시겠어요?</Link> */}
-          </div>
-          <button className='btn btn-login' type='submit'>
-            로그인
-          </button>
-          <div className='alert-box'></div>
-      </center>
+    <div id='loginPageContainer'>
+        <div id='loginImg'>
+          <Link to ='/'><img src='/images/logo.png' alt=''></img></Link>
+        </div>
+      <h1>로그인</h1>
+      <p>아직 회원이 아니신가요? <Link to='/signin'>회원가입 하기</Link></p>
+        <div id='inputContainer'>
+          <div><input className='loginInput' type='email'placeholder='이메일'/></div>
+          <div><input className='loginInput' type='password' placeholder='비밀번호'/></div>
+        </div>
+        <button id='loginButton'>Login</button>
+        <div id='test'>
+          <div>Oauth</div>
+        </div>
     </div>
   );
 }
+    <div>
+      <center>
+        <h1>Sign In</h1>
+          <div><span>이메일</span><input type='email'/></div>
+          <div><span>비밀번호</span><input type='password'/></div>
+          <button className='btn btn-login' type='submit'>로그인</button>
+      </center>
+    </div>

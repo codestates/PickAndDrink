@@ -6,11 +6,11 @@ import Footer from "../components/Footer";
 
 export default function Main() {
   return (
-    <div>
+    <>
       <Header />
       <Banner />
       <ItemMain />
       <Footer />
-    </div>
+    </>
   );
 }

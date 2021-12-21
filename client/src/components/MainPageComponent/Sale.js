@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Sale({sale}) {
-  console.log(sale)
   return (
       <article key={sale.id} className="sale">
         <div className="saleImg">

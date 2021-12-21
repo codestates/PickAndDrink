@@ -4,7 +4,8 @@ import { sales } from "../assets/dummyData1";
 import Item from "../components/EventPageComponent/EventPageItem"
 import Aside from "../components/EventPageComponent/EventPageAside";
 import Nav from "../components/EventPageComponent/EventPageNav";
-import "./event.css"
+import Footer from '../components/Footer'
+import "./Event.css"
 
 export default function Event() {
   return (
@@ -16,10 +17,11 @@ export default function Event() {
       <section id="eventListContainer">
     <Nav />
         <article key={sales[0].id} id='eventList'>
-          {sales.map((sale) => <Item item={sale} />)}
+          {sales.map((sale) => <Item key={sale.id} item={sale} />)}
         </article>
       </section>
     </div>
+    <Footer />
   </>
   );
 }
