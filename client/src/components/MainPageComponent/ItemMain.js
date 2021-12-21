@@ -24,6 +24,7 @@ function ItemMain() {
           {sales.map((sale) => <Sale key={sale.id} sale={sale} />)}
         </section>
       </div>
+      
     </div>
   );
 }

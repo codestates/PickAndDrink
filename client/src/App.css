@@ -3,6 +3,10 @@
   color: rgb(51, 51, 51);
 }
 
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: salmon;

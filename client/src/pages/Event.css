@@ -1,5 +1,5 @@
 #eventContainer {
-  margin: 0 10vw;
+  margin: 0 10vw 50px;
   border: 1px solid black;
   padding: 50px;
 }
@@ -31,7 +31,7 @@ aside li {
   vertical-align: top;
   display: inline-block;
   width: 80%;
-  padding: 0 2vw;
+  padding: 0 2vw 0;
 }
 
 #eventGroupContainer {
@@ -98,11 +98,12 @@ aside li {
 
 .eventCategory {
   padding-left: 30px;
-  font-size: 1.4vw;
+  font-size: 1.5vh;
+  font-weight: bold;
 }
 
 .eventInfo div:last-child {
-  font-size: 1.3vw;
+  font-size: 1.5vh;
 }
 
 .star {

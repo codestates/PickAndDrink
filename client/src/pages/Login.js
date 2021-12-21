@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from "../components/Header";
 import '../pages/Login.css'
 import axios from 'axios';
 import {Link} from 'react-router-dom'
@@ -31,6 +32,7 @@ export default function Login () {
     // TODO : 이메일 및 비밀번호를 입력하지 않았을 경우 에러를 표시해야 합니다.
   // };
   return (
+    <>
     <div id='loginPageContainer'>
         <div id='loginImg'>
           <Link to ='/'><img src='/images/logo.png' alt=''></img></Link>
@@ -46,6 +48,7 @@ export default function Login () {
           <div>Oauth</div>
         </div>
     </div>
+    </>
   );
 }
     <div>
