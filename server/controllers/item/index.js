@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
             store.name AS store_name, event.info AS event_info, event.description
         FROM item INNER JOIN store INNER JOIN event
         WHERE item.store_id = store.id AND item.event_id = event.id
-        ORDER BY item.ranking_count DESC
+        ORDER BY item.ranking_count DESC, item.id
         `,
     { type: QueryTypes.SELECT }
   );
