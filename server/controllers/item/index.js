@@ -28,15 +28,11 @@ module.exports = async (req, res) => {
     const result = itemData.filter((item) => {
       // 조합마다 필터구문 따로 써줄거 아니면 전부 체크해야 함
       if (!query["category"] || item["category"] === query["category"]) {
-        if (
-          !query["store-name"] ||
-          item["store_name"] === query["store-name"]
-        ) {
-          if (
-            !query["event-info"] ||
-            item["event_info"] === query["event-info"]
-          ) {
-            return true;
+        if (!query["store-name"] || item["store_name"] === query["store-name"]) {
+          if (!query["event-info"] || item["event_info"] === query["event-info"]) {
+            if (!query["item-name"] || item["name"].includes(query["item-name"])) {
+              return true;
+            }
           }
         }
       }
