@@ -1,20 +1,21 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class store extends Model {
+  class event extends Model {
     static associate(models) {}
   }
-  store.init(
+  event.init(
     {
-      name: DataTypes.STRING,
+      info: DataTypes.STRING,
+      description: DataTypes.STRING,
     },
     {
       sequelize,
       underscored: true,
       freezeTableName: true,
-      tableName: "store",
+      tableName: "event",
       timestamps: false,
     }
   );
-  return store;
+  return event;
 };
