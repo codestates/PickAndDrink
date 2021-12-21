@@ -1,11 +1,17 @@
-* {
+ *{
   box-sizing: border-box;
 }
-
+#body {
+  margin: 0 100px 50px 100px;
+}
+/*
 body {
-  margin: 0 200px 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
 }
 
 #body {
   width: 1500px;
-}
+} */

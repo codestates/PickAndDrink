@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Header from '../components/Header'
 axios.defaults.withCredentials = true;
 
 //프랍스 이름 다시 정하기
@@ -31,7 +31,7 @@ export default function Login () {
   return (
     <div>
       <center>
-        <h1>Sign In</h1>
+        <Header />
           <div>
             <span>이메일</span>
             <input type='email'/>

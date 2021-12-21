@@ -1,12 +1,17 @@
 import React from 'react';
 import axios from 'axios';
-
+import ItemMypage from '../components/ItemMypage'
+import Header from '../components/Header'
 
 axios.defaults.withCredentials = true;
 
 function Mypage (props) { 
   return (
     <div>
+
+      <Header />
+      <ItemMypage />
+
       {/* {!props.userinfo ?  <div></div>  
       : (
       <center>

@@ -1,0 +1,38 @@
+#item-ranking-body{
+    border: 1px solid black;
+}
+#ranking-Container{
+    border: 1px solid black;
+}
+.guide{
+    border: 1px solid black;
+}
+.ranking-items{
+    border: 1px solid black;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* align-items: center; 정렬 (세로..?)*/
+
+.ranking-number{
+    font-size: xx-small;
+}
+.ranking-item-img{
+    width: 100px;
+}
+.ranking-item-img img{
+    width: 100%;
+}
+.item-name{
+    font-size: small;
+}
+.item-price{
+    font-size: small;
+}
+.item-store{
+    font-size: small;
+}
+.item-score{
+    font-size: small;
+}
