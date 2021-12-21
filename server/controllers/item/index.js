@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
 
   // 변경된 부분(raw query 사용)
   const itemData = await sequelize.query(
-    `SELECT item.id, item.name, item.price, item.img, item.category, 
+    `SELECT item.id, item.name, item.price, item.img, item.category, item.ranking_count,
             store.name AS store_name, event.info AS event_info, event.description
         FROM item INNER JOIN store INNER JOIN event
         WHERE item.store_id = store.id AND item.event_id = event.id
