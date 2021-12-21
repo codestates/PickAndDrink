@@ -1,4 +1,4 @@
-export const sale = [
+export const sales = [
   {
     id: 1,
     name: "코카콜라",

@@ -1,8 +1,7 @@
 #banner {
-  margin-top: 80px;
+  margin: 0 10vw 50px;
   height: 300px;
   border: 1px solid black;
   text-align: center;
   line-height: 300px;
-  margin-bottom: 50px;
 }
