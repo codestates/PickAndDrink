@@ -13,9 +13,12 @@ router.get('/auth/me', controllers.me)
 router.post('/auth/signup', controllers.signup)
 router.delete('/auth/signout', controllers.signout)
 
-// //comment routing
-// router.get('/comment/:user-id', controllers.comment.getUserComment) // getUserComment 라는 함수명으로 가져오는 것으로 임시 작성
-// router.get('/comment/:item-id', controllers.comment.getItemComment) // getItemComment 라는 함수명으로 가져오는 것으로 임시 작성
+// comment routing
+// 특정 사용자가 작성한 전체 한줄평 조회
+router.get('/comment', controllers.comment.getUserComment)
+router.get('/comment/:id', controllers.comment.getItemComment)
+router.patch('/comment/:id', controllers.comment.modifyComment)
+router.post('/comment/:id', controllers.comment.postUserComment)
 
 // //item routing
 router.get('/item', controllers.item) // 기본값? 기본메서드 같은 느낌?
