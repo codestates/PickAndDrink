@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('item', [
+    return queryInterface.bulkInsert("item", [
       {
         name: "제로콜라",
         price: 1900,
@@ -12,7 +12,7 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
         store_id: 1,
-        event_id: 1
+        event_id: 1,
       },
       {
         name: "보성녹차",
@@ -23,7 +23,7 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
         store_id: 2,
-        event_id: 2
+        event_id: 2,
       },
       {
         name: "칸타타",
@@ -34,7 +34,7 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
         store_id: 3,
-        event_id: 3
+        event_id: 3,
       },
       // {
       //   name: "롯데)숙취해소깨수깡160ML",
@@ -45,7 +45,7 @@ module.exports = {
       //   created_at: new Date(),
       //   updated_at: new Date()
       // },
-			// {
+      // {
       //   name: "빙그레)우유얌초코300ML",
       //   price: 1500,
       //   img: "http://gs25appimg.gsretail.com/imgsvr/item/GD_8801104670449_001.jpg",
@@ -434,11 +434,10 @@ module.exports = {
       //   updated_at: new Date()
       // },
       // // GS 2+1 끝
-      
-  ]);
+    ]);
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('item', null, {});
-  }
+    return queryInterface.bulkDelete("item", null, {});
+  },
 };
