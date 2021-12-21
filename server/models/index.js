@@ -37,7 +37,7 @@ db.Sequelize = Sequelize;
 // association 설정
 // 1(user):N(like_comment)
 // ! const는 상수이므로, 한번만 변수 선언해야함. 해당 부분 수정
-const {user, item, store, event_info} = sequelize.models
+const {user, item, store, event} = sequelize.models
 // like_comment.belongsTo(user)
 // user.hasMany(like_comment, {foreignKey: 'user_id'})
 
@@ -47,8 +47,14 @@ const {user, item, store, event_info} = sequelize.models
 item.belongsToMany(user, {through: 'like-comment', foreignKey: 'item_id'})
 user.belongsToMany(item, {through: 'like-comment', foreignKey: 'user_id'})
 
-store.belongsToMany(event_info, {through: 'store_event_item', foreignKey: 'store_id'})
-event_info.belongsToMany(store, {through: 'store_event_item', foreignKey: 'event_id'})
+item.belongsTo(store)
+store.hasMany(item, {foreignKey: 'store_id'} )
+
+item.belongsTo(event)
+event.hasMany(item, {foreignKey: 'event_id'} )
+
+// store.belongsToMany(event_info, {through: 'store_event_item', foreignKey: 'store_id'})
+// event_info.belongsToMany(store, {through: 'store_event_item', foreignKey: 'event_id'})
 
 
 module.exports = db;

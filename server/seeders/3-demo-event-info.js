@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('event_info', [
+    return queryInterface.bulkInsert('event', [
     {
         info: "1+1", // 1+1
     },
@@ -11,16 +11,16 @@ module.exports = {
     },
     {
         info: "특가", // 특가
-        discount: 100
+        description: 100
     },
     {
         info: "특가", // 특가
-        discount: 500
+        description: 500
     },
   ]);
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('event_info', null, {});
+    return queryInterface.bulkDelete('event', null, {});
   }
 };

@@ -23,6 +23,14 @@ module.exports = {
       category: {
         type: Sequelize.STRING
       },
+      store_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      event_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,

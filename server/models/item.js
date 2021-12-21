@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     img: DataTypes.STRING,
     ranking_count: DataTypes.INTEGER,
-    category: DataTypes.STRING
+    category: DataTypes.STRING,
+    store_id: DataTypes.INTEGER,
+    event_id: DataTypes.INTEGER
   }, {
     sequelize,
     underscored: true,

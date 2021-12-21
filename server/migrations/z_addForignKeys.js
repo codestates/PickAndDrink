@@ -39,9 +39,8 @@ module.exports = {
         onDelete: 'cascade',
         onUpdate: 'cascade'
     }),
-    // item ~ like_comment 연결 끝
 
-    await queryInterface.addConstraint('store_event_item', {
+    await queryInterface.addConstraint('item', {
       fields: ['store_id'],
       type: 'foreign key',
       name: 'FK_store_id',
@@ -52,28 +51,18 @@ module.exports = {
       onDelete: 'cascade',
       onUpdate: 'cascade'
     }),
-    await queryInterface.addConstraint('store_event_item', {
+    await queryInterface.addConstraint('item', {
       fields: ['event_id'],
       type: 'foreign key',
       name: 'FK_event_id',
       references: {
-        table: 'event_info',
+        table: 'event',
         field: 'id'
       },
       onDelete: 'cascade',
       onUpdate: 'cascade'
-    }),
-    await queryInterface.addConstraint('store_event_item', {
-        fields: ['item_id'],
-        type: 'foreign key',
-        name: 'FK_join_item_id',
-        references: {
-          table: 'item',
-          field: 'id'
-        },
-        onDelete: 'cascade',
-        onUpdate: 'cascade'
     })
+
     // 문어발 완성. 니들은 이런거 하지마라
   },
 
