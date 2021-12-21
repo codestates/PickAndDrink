@@ -3,8 +3,6 @@ const { chkValid } =require('../tokenFunctions')
 
 module.exports = (req, res) => {
 
-// console.log(req.headers.authorization)
-
 if(!req.headers.authorization){
     res.status(400).send({  message: "Bad Request"})
 }

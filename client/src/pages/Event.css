@@ -1,0 +1,111 @@
+#eventContainer {
+  margin: 0 10vw;
+  border: 1px solid black;
+  padding: 50px;
+}
+
+#salesH {
+  text-align: center;
+  margin-bottom: 7%;
+}
+
+aside {
+  display: inline-block;
+  border: 1px solid black;
+  width: 20%;
+}
+
+aside ul {
+  list-style: none;
+  font-size: 1.5vw;
+  padding: 0 2vw;
+}
+
+aside li {
+  padding-left: 4px;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  margin-bottom: 2.5vh;
+}
+
+#eventListContainer {
+  vertical-align: top;
+  display: inline-block;
+  width: 80%;
+  padding: 0 2vw;
+}
+
+#eventGroupContainer {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+#eventGroup {
+  margin: 0;
+  margin-bottom: 5vh;
+  justify-content: space-around;
+  width: 100%;
+  display: inline-flex;
+  padding: 10px 0;
+  border: 1px solid black;
+}
+
+#eventGroup li {
+  list-style: none;
+  font-size: 1.5vw;
+}
+
+#eventList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  padding: 7vh 0;
+}
+
+.event {
+  border: 1px solid black;
+  width: 30%;
+  margin: 0 7vh 4vh;
+  padding: 20px
+}
+
+.eventImg {
+  width: 100%;
+  display: block;
+  border: 1px solid black;
+}
+
+.event img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eventInfo{
+  text-align: center;
+  margin: 1vw 0 0 0;
+  border: 1px solid black;
+}
+
+.eventInfo div {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.eventCategory {
+  padding-left: 30px;
+  font-size: 1.4vw;
+}
+
+.eventInfo div:last-child {
+  font-size: 1.3vw;
+}
+
+.star {
+  padding-right: 5px;
+  float: right;
+}

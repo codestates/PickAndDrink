@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import '../pages/Login.css'
 import axios from 'axios';
+<<<<<<< HEAD:client/src/pages/login.js
 import Header from '../components/Header'
+=======
+import {Link} from 'react-router-dom'
+
+>>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382:client/src/pages/Login.js
 axios.defaults.withCredentials = true;
 
 //프랍스 이름 다시 정하기
@@ -29,8 +35,26 @@ export default function Login () {
     // TODO : 이메일 및 비밀번호를 입력하지 않았을 경우 에러를 표시해야 합니다.
   // };
   return (
+    <div id='loginPageContainer'>
+        <div id='loginImg'>
+          <Link to ='/'><img src='/images/logo.png' alt=''></img></Link>
+        </div>
+      <h1>로그인</h1>
+      <p>아직 회원이 아니신가요? <Link to='/signin'>회원가입 하기</Link></p>
+        <div id='inputContainer'>
+          <div><input className='loginInput' type='email'placeholder='이메일'/></div>
+          <div><input className='loginInput' type='password' placeholder='비밀번호'/></div>
+        </div>
+        <button id='loginButton'>Login</button>
+        <div id='test'>
+          <div>Oauth</div>
+        </div>
+    </div>
+  );
+}
     <div>
       <center>
+<<<<<<< HEAD:client/src/pages/login.js
         <Header />
           <div>
             <span>이메일</span>
@@ -49,7 +73,11 @@ export default function Login () {
             로그인
           </button>
           <div className='alert-box'></div>
+=======
+        <h1>Sign In</h1>
+          <div><span>이메일</span><input type='email'/></div>
+          <div><span>비밀번호</span><input type='password'/></div>
+          <button className='btn btn-login' type='submit'>로그인</button>
+>>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382:client/src/pages/Login.js
       </center>
     </div>
-  );
-}
