@@ -7,8 +7,6 @@ module.exports = async (req, res) => {
 
     const {username, password, nickname, email} = req.body
 
-    // console.log(req.body)
-
     if (!username || !password || !nickname || !email) return res.status(401).json({message: 'check your input!'})
 
     user.findOrCreate({

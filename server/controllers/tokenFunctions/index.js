@@ -2,10 +2,6 @@
 // dotenv로 ACCESS_SECRET, REFRESH_SECRET 받아오기
 // jsonwebtoken을 불러와 sign 함수 사용
 // module.exports로 함수들을 한번에 내보내기
-
-// 로그인 시에는 accessToken, nickname, email, message 를 반환해야 함.
-// GET /auth/me 시에는 유저데이터 전체를 반환해야 함.
-
 require('dotenv').config()
 const {sign, verify} = require('jsonwebtoken')
 
