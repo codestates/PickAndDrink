@@ -8,12 +8,12 @@ import Footer from '../components/Footer'
 import "./Event.css"
 import axios from "axios";
 
-export default function Event({isLogin, userinfo}) {
+export default function Event({isLogin, userinfo, setIsLogin}) {
   const [store, setStore] = useState("전체")
   const [event, setEvent] = useState("전체")
   const [eventItem, setEventItem] = useState([])
 
-  useEffect(() => { // 편의점 음료 특가 페이지가 최초 랜더링시 실행되는 코드, 로직 진짜 이상함..
+  useEffect(() => {
     let queryString = `https://localhost:8443/item?`
     if (store !== "전체") queryString += `store-name=${store}&` 
     else queryString += ''
@@ -40,7 +40,7 @@ export default function Event({isLogin, userinfo}) {
 
   return (
     <div>
-    <Header isLogin={isLogin} userinfo={userinfo}/>
+    <Header isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>
       <div id='eventContainer'>
         <h1 id='salesH'>편의점 음료 특가❗</h1>
           <Aside getStore={getStore}/>

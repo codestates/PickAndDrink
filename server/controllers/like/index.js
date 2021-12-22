@@ -77,7 +77,7 @@ module.exports = {
                 where: { id: itemId },
               }
             );
-            res.status(200).send({ message: "push like" });
+            res.status(200).send({ message: "add like" });
           } else {
             await like_comment.update(
               { like: 0 },

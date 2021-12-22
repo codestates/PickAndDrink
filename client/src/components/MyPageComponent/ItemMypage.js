@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ItemMypage.css'
 // import { items } from '../assets/dummyData'
@@ -7,7 +7,8 @@ import ItemMypageBottom from './ItemMypageBottom';
 import axios from 'axios';
 
 function ItemMypage ({userinfo, accessToken}) {
-
+  const [likeItem, setLikeItem] = useState([])
+  
   useEffect(() => {
     axios.get('https://localhost:8443/like',{
       headers: {
@@ -16,7 +17,7 @@ function ItemMypage ({userinfo, accessToken}) {
       }
     })
     .then((res) => {
-      console.log(res)
+      setLikeItem(res.data.data)
     })
   }, [])
 
@@ -36,19 +37,9 @@ function ItemMypage ({userinfo, accessToken}) {
           <div className='userLike'>
             <article className='user-like'>{`${userinfo.nickname}님의 좋아요 목록`}</article>
           </div>
-          <ItemMypageBottom />
+          <ItemMypageBottom likeItem={likeItem}/>
         </section>
-        
-        {/* <div> 
-          <article className="itemList">
-            {items.map((item) => <Items key={item.id} item={item} />)}
-          </article>
-        </div>
-          {/* </article> */}
-          
-        
       </div>
-  
   );
 }
 

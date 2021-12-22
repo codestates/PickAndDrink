@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom";
+import {useState} from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import "../components/Header.css";
 
-function Header({isLogin, userinfo}) {
-  
+function Header({isLogin, userinfo, setIsLogin}) {
+  const [word, setWord] = useState()
+  const navigate = useNavigate()
+
+  function logOut() {
+    setIsLogin(false)
+  }
+
+  const gotoSearch = () => {
+    if (!word || word === ' ') return null 
+    navigate(`/search?item-name=${word}`)
+  }
+
   return (
     <div id='headerContainer'>
       <header id="header">
@@ -12,16 +24,17 @@ function Header({isLogin, userinfo}) {
           </Link>
           </div>
         <div id="searchContainer">
-          <input id="search" placeholder="검색" type="text"></input>
+          <input id="search" placeholder="검색" type="text" onChange={(e) => setWord(e.target.value)}></input>
           <input
             id="searchImg"
             placeholder="검색"
             type="image"
             src="https://file.rankingdak.com/_skin/new_rankingdak_ver4/img/common/search_icon2.png"
+            onClick={gotoSearch}
           ></input>
         </div>
         {
-          userinfo ? <div id="hello">{userinfo.nickname}님 안녕하세요!</div>
+          userinfo && isLogin ? <div id="hello">{userinfo.nickname}님 안녕하세요!</div>
           : <Link to="/signup"><div id="signup">signup</div></Link>
         }
       </header>
@@ -33,6 +46,10 @@ function Header({isLogin, userinfo}) {
         {
           isLogin ? <Link to="/mypage"><div>Mypage</div></Link>
           : <Link to="/login"><div>Login</div></Link>
+        }
+        {
+          isLogin ? <div id='logOut' onClick={logOut}>LogOut</div>
+          : ''
         }
       </nav>
     </div>
