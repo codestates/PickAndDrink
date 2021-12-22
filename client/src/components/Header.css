@@ -80,3 +80,8 @@
 #menu div:active {
   background-color: white;
 }
+
+#hello {
+  font-size: 1.2vw;
+  text-align: center;
+}

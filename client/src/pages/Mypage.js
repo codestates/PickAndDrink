@@ -8,26 +8,13 @@ import ItemPageBottom from '../components/MyPageComponent/ItemMypageBottom'
 
 axios.defaults.withCredentials = true;
 
-function Mypage (props) { 
+function Mypage ({isLogin, userinfo, accessToken}) { 
   return (
     <div>
-      <Header />
+      <Header isLogin={isLogin} userinfo={userinfo}/>
       <div id='itemMypage-container'>
       <Sidebar/>
-      <ItemMypage /> 
-    
-      {/* {!props.userinfo ?  <div></div>  
-      : (
-      <center>
-        <h1>Mypage</h1>
-        <div className='username'>{props.userinfo.username}</div>
-        <div className='email'>{props.userinfo.email}</div>
-        <div className='mobile'>{props.userinfo.mobile}</div>
-        <button className='btn btn-logout' onClick={props.handleLogout}>
-          logout
-        </button>
-      </center>
-        )} */}
+      <ItemMypage userinfo={userinfo} accessToken={accessToken}/> 
       </div>
     </div>
   );

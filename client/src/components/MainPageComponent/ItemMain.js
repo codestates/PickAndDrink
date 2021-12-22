@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import "./ItemMain.css";
 import Item from "./Item";
 import Sale from "./Sale"
