@@ -11,7 +11,10 @@ const router = require('./router')
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(cookieParser())
-app.use(cors({ origin: true })/*세부 설정 오류시 수정 필요*/)
+app.use(cors({ 
+  origin: "http://localhost:3000",
+  credentials: true, 
+})/*세부 설정 오류시 수정 필요*/)
 
 //라우터 처리해야하므로 라우터 변수를 어디서 가져와야 함 (라우트 파일 생성해야 함)
 // -> 라우트 파일쪽에서 컨트롤러와 연결 필요

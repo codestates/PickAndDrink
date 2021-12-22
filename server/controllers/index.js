@@ -8,10 +8,6 @@ module.exports = {
     comment: require('./comment'),
     item: require('./item'),
     like: require('./like'),
-<<<<<<< HEAD
+    github: require('./auth/github'),
     googleLogin: require('./auth/google')
-=======
-    github: require('./auth/github')
->>>>>>> 7f829790d1de98b17187fa6cb74e8638ec36409a
-
 }

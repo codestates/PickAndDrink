@@ -5,7 +5,6 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Signup from './pages/Signup';
 import Ranking from './pages/Ranking';
-import Signin from './pages/Signin';
 import Main from './pages/Main'
 import axios from 'axios';
 import './App.css';
@@ -82,7 +81,6 @@ export default function App () {
         <Route path='/mypage'element={<Mypage isLogin={isLogin} userinfo={userinfo} accessToken={accessToken}/>} />
         <Route path='/event'element={<Event isLogin={isLogin} userinfo={userinfo}/>} />
         <Route path='/ranking'element={<Ranking isLogin={isLogin} userinfo={userinfo}/>} />
-        <Route path='/signin'element={<Signin isLogin={isLogin} userinfo={userinfo}/>} />
         <Route path='/signup'element={<Signup isLogin={isLogin} setToken={handleAccessToken} handleLogin={handleLogin} userinfo={userinfo}/>} />
       </Routes>
 
