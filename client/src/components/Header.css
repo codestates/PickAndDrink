@@ -3,6 +3,7 @@
 }
 
 #headerContainer {
+  width: 100vw;
   padding: 0 10vw;
   margin-bottom: 80px;
 }
@@ -59,9 +60,31 @@
   text-align: center;
 }
 
+#signup:hover {
+  background-color: #87CEFA;
+  border-radius: 3px;
+}
+
+#signup:active {
+  background-color: white;
+}
+
 #menu {
   font-size: 1vw;
   padding: 0 20vw;
   display: flex;
   justify-content: space-between;
+}
+
+#menu div {
+  padding: 0.3vw 0.6vw;
+}
+
+#menu div:hover {
+  background-color: #87CEFA;
+  border-radius: 3px;
+}
+
+#menu div:active {
+  background-color: white;
 }

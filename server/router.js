@@ -9,7 +9,8 @@ require('dotenv').config()
 // auth routing
 router.post('/auth/login', controllers.login)
 router.get('/auth/logout', controllers.logout)
-router.get('/auth/me', controllers.me)
+router.get('/auth/me', controllers.me.getMyInfo)
+router.patch('/auth/me', controllers.me.updateUserInfo)
 router.post('/auth/signup', controllers.signup)
 router.delete('/auth/signout', controllers.signout)
 

@@ -6,7 +6,7 @@ import './Signup.css'
 export default function Signup() {
 
   return (
-    <>
+    <div>
       <Header />
       <div id='signupContainer'>
         <div>
@@ -33,7 +33,7 @@ export default function Signup() {
         <button id='signupButton'>회원가입!</button>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
