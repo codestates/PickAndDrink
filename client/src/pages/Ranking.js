@@ -7,9 +7,6 @@ export default function Ranking() {
   return (
     <div>
       <Header />
-        <div className='asdf'>
-          
-        </div>
     </div>
   )
 }
