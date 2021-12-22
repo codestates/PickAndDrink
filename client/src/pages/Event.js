@@ -13,7 +13,7 @@ export default function Event({isLogin, userinfo, setIsLogin}) {
   const [event, setEvent] = useState("전체")
   const [eventItem, setEventItem] = useState([])
 
-  useEffect(() => { // 편의점 음료 특가 페이지가 최초 랜더링시 실행되는 코드, 로직 진짜 이상함..
+  useEffect(() => {
     let queryString = `https://localhost:8443/item?`
     if (store !== "전체") queryString += `store-name=${store}&` 
     else queryString += ''

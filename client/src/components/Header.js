@@ -1,10 +1,18 @@
-import { Link } from "react-router-dom";
+import {useState} from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import "../components/Header.css";
 
 function Header({isLogin, userinfo, setIsLogin}) {
-  
+  const [word, setWord] = useState()
+  const navigate = useNavigate()
+
   function logOut() {
     setIsLogin(false)
+  }
+
+  const gotoSearch = () => {
+    if (!word || word === ' ') return null 
+    navigate(`/search?item-name=${word}`)
   }
 
   return (
@@ -16,12 +24,13 @@ function Header({isLogin, userinfo, setIsLogin}) {
           </Link>
           </div>
         <div id="searchContainer">
-          <input id="search" placeholder="검색" type="text"></input>
+          <input id="search" placeholder="검색" type="text" onChange={(e) => setWord(e.target.value)}></input>
           <input
             id="searchImg"
             placeholder="검색"
             type="image"
             src="https://file.rankingdak.com/_skin/new_rankingdak_ver4/img/common/search_icon2.png"
+            onClick={gotoSearch}
           ></input>
         </div>
         {
