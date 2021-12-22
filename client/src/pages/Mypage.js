@@ -12,8 +12,13 @@ function Mypage (props) {
     <div>
       <Header />
       <div id='itemMypage-container'>
+<<<<<<< HEAD
       <Sidebar/>
       <ItemMypage /> 
+=======
+        <Sidebar/>
+        <ItemMypage /> 
+>>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49
 
       {/* {!props.userinfo ?  <div></div>  
       : (
@@ -33,4 +38,3 @@ function Mypage (props) {
 }
 
 export default Mypage;
-

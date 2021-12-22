@@ -45,7 +45,7 @@ export default function App () {
   //   isAuthenticated();
   // }, []);
 
-  return ( // index페이지를 pages폴더에 넣어야하나?
+  return (
     <div>
 
       <Routes>
@@ -66,12 +66,3 @@ export default function App () {
 // Switch가 Routes로 대체됨
 // UseHistory가 useNavigate로 대체됨
 // Redirect가 Navigate로 대체됨
-
-// import 경로들 첫 글자 대소문자 구분
-
-// 68 ~ 74줄 무슨 코드인지
-
-// 해야할 것
-// page와 component분리작업
-// page: 와이어 프레임에서 그린 page들
-// component: footer, header

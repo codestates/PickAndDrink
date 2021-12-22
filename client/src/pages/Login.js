@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from "../components/Header";
+import Footer from '../components/Footer'
 import '../pages/Login.css'
 import axios from 'axios';
 import Header from '../components/Header'
@@ -32,9 +34,12 @@ export default function Login () {
     // TODO : 이메일 및 비밀번호를 입력하지 않았을 경우 에러를 표시해야 합니다.
   // };
   return (
+    <div>
+    <Header />
     <div id='loginPageContainer'>
         <div id='loginImg'>
-          <Link to ='/'><img src='/images/logo.png' alt=''></img></Link>
+          <img src='/images/blueCat.png' alt='' />
+          <img src='/images/logo.png' alt='' />
         </div>
       <h1>로그인</h1>
       <p>아직 회원이 아니신가요? <Link to='/signin'>회원가입 하기</Link></p>
@@ -43,11 +48,12 @@ export default function Login () {
           <div><input className='loginInput' type='password' placeholder='비밀번호'/></div>
         </div>
         <button id='loginButton'>Login</button>
-        <div id='test'>
-          <div>Oauth</div>
-        </div>
+          <div id='Oauth'>Oauth</div>
+    </div>
+    <Footer />
     </div>
   );
+<<<<<<< HEAD
 }
     <div>
       <center>
@@ -71,3 +77,6 @@ export default function Login () {
           <div className='alert-box'></div>
       </center>
     </div>
+=======
+}
+>>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49

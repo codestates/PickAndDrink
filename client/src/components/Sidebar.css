@@ -1,4 +1,5 @@
 #mypage-sidebar-body{
+<<<<<<< HEAD
     display: inline-block;
     border: 1px solid black;
     width: 20%;
@@ -15,4 +16,22 @@
     border-bottom: 1px solid rgb(51, 51, 51);
     margin-bottom: 2.5vh;
     margin-top: 3vh;
+=======
+  display: inline-block;
+  border: 1px solid black;
+  width: 20%;
+  height: 300px;
+}
+#sidebar-container{
+  list-style: none;
+  font-size: 1.5vw;
+  padding: 0 2vw;
+
+}
+.sidebar-category{
+  padding-left: 4px;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  margin-bottom: 2.5vh;
+  margin-top: 3vh;
+>>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49
 }
