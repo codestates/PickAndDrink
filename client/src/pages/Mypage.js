@@ -14,7 +14,8 @@ function Mypage (props) {
       <Header />
       <div id='itemMypage-container'>
       <Sidebar/>
-      <ItemMypage /> 
+      <ItemMypage />
+      {console.log(props)}
     
       {/* {!props.userinfo ?  <div></div>  
       : (

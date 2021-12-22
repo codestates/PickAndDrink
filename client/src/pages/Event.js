@@ -9,38 +9,43 @@ import "./Event.css"
 import axios from "axios";
 
 export default function Event() {
-  
-  // const store = ['전체', '']
-  const eventId = [1, 2]
-  const [store, setStore] = useState(null)
-  const [event, setEvent] = useState(null)
+
+  const [store, setStore] = useState("전체")
+  const [event, setEvent] = useState("전체")
   const [eventItem, setEventItem] = useState([])
+  const eventId = {'전체': 0, '1 + 1': 1, '2 + 1': 2, '금액 할인': 3}
 
-  useEffect(() => { // 편의점 음료 특가 페이지가 최초 랜더링시 실행되는 코드, 로직 진짜 이상함..
-    if((store === null && event === null) || (store === '전체' && store === '전체')) { // 최초 랜더링과 상태값 2개가 모두 전체일 때 실행되는 코드
-      let eventList = []
-        eventId.map((eventId) => {
-        axios.get(`https://localhost:8443/item?event-info=${eventId}`)
-        .then((res) => {
-          for(let i = 0; i < 2; i++) {
-            eventList.push(res.data.data[i])
-          }
-          return eventList
-        })
-        .then((eventList) => {
-          if(eventList.length === 4) { // 특히 여기 진짜 이상함
-            setEventItem(eventList)
-          }
-        })
+  useEffect( async () => { // 편의점 음료 특가 페이지가 최초 랜더링시 실행되는 코드, 로직 진짜 이상함..
+    // if((store === null && event === null) || (store === '전체' && store === '전체')) { // 최초 랜더링과 상태값 2개가 모두 전체일 때 실행되는 코드
+    //   let eventList = []
+    //     eventId.map((eventId) => {
+    //     axios.get(`https://localhost:8443/item?event-info=${eventId}`)
+    //     .then((res) => {
+    //       for(let i = 0; i < 2; i++) {
+    //         eventList.push(res.data.data[i])
+    //       }
+    //       return eventList
+    //     })
+    //     .then((eventList) => {
+    //       if(eventList.length === 4) { // 특히 여기 진짜 이상함
+    //         setEventItem(eventList)
+    //       }
+    //     })
+    //   })
+    // }  else { // 여기는 store와 event 2개의 쿼리를 한꺼번에 보내야하는데 그 API는 없는?
+    // }
+
+    let queryString = `https://localhost:8443/item?`
+    if (store !== "전체") queryString += `store-name=${store}&` 
+    else queryString += ''
+
+    if (event !== "전체") queryString += `event-info=${eventId[event]}&`
+    else queryString += ''
+
+    await axios.get(queryString)
+      .then((res) => {
+        setEventItem(res.data.data)
       })
-    }  else { // 여기는 store와 event 2개의 쿼리를 한꺼번에 보내야하는데 그 API는 없는?
-      
-      
-    }
-
-
-    // console.log(store)
-    // console.log(event)
   },[store, event])
 
   function getStore(storeName) { // setState의 비동기성 이해 후 리팩토링
