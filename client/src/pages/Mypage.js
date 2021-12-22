@@ -4,6 +4,7 @@ import ItemMypage from '../components/ItemMypage'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import './Mypage.css' 
+import ItemPageBottom from '../components/ItemMypageBottom'
 
 axios.defaults.withCredentials = true;
 
@@ -12,9 +13,9 @@ function Mypage (props) {
     <div>
       <Header />
       <div id='itemMypage-container'>
-        <Sidebar/>
-        <ItemMypage /> 
-
+      <Sidebar/>
+      <ItemMypage /> 
+    
       {/* {!props.userinfo ?  <div></div>  
       : (
       <center>

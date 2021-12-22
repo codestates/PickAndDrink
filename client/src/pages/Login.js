@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from '../components/Footer'
 import '../pages/Login.css'
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 axios.defaults.withCredentials = true;
 
@@ -53,3 +53,25 @@ export default function Login () {
     </div>
   );
 }
+    <div>
+      <center>
+        <Header />
+          <div>
+            <span>이메일</span>
+            <input type='email'/>
+          </div>
+          <div>
+            <span>비밀번호</span>
+            <input
+              type='password'
+            />
+          </div>
+          <div>
+            {/* <Link to='/signup'>회원가입을 하시겠어요?</Link> */}
+          </div>
+          <button className='btn btn-login' type='submit'>
+            로그인
+          </button>
+          <div className='alert-box'></div>
+      </center>
+    </div>
