@@ -30,7 +30,7 @@ module.exports = {
             const payLoad = {id, username, email, nickname, createdAt, updatedAt};
     
             // console.log(data)
-            res.status(200).json({"userData": payLoad})
+            res.status(200).json({userData: payLoad})
         
         }).catch((err) =>
             // console.log("내부 에러 발생")

@@ -18,7 +18,8 @@ module.exports = {
   },
   // accessToken을 data로 담아 반환 > res.body.data.accessToken
   sendAccessToken: (res, accessToken) => {
-    res.json({ data: { accessToken }, message: "ok" });
+    //! 수정된 부분
+    res.json({ accessToken, message: "ok" });
   },
   // chkValid 함수 > null 반환은 falsy
   chkValid: (req) => {
