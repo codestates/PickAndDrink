@@ -5,7 +5,7 @@ import RankItem from '../MainPageComponent/RankItem'
 import RankingNavList from './RankingNavList';
 import axios from 'axios';
 
-export default function Itemranking () {
+export default function Itemranking ({isLogin, setToken}) {
   const navList = ['전체', '탄산음료', '커피', '건강음료', '유제품', '전통음료','물', '과채음료']
   
   const [curCategory, setCurcategory] = useState('전체')
@@ -56,7 +56,7 @@ export default function Itemranking () {
           </article> */}
 
           <div className='rankList'>
-          {firstItem.map((item) => <RankItem curCategory={curCategory} key={item.id} item={item} />)}
+          {firstItem.map((item) => <RankItem isLogin={isLogin} setToken={setToken} curCategory={curCategory} key={item.id} item={item} />)}
           </div>
         </section>
 

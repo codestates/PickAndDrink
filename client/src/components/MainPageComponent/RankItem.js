@@ -1,6 +1,37 @@
 import React from "react";
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
-export default function RankItem({item, curCategory}) {
+export default function RankItem({isLogin, setToken, item, curCategory}) {
+  const navigate = useNavigate()
+
+  const itemInfo = (e) => {
+    console.log(e.id) // 클릭한 아이템 id 받기
+    console.log(setToken) // 현재 액세스
+    const id = e.id
+
+    if (!isLogin) {
+      alert('먼저 로그인하세요!')
+      navigate('/login')
+    }
+
+    axios({
+      method: 'POST',
+      url: `https://localhost:8443/like/${id}`,
+      headers: {
+        accept: 'application/json',
+        authorization: setToken
+      },
+    })
+    .then(result => {
+      console.log(result)
+      if (result.data.message === 'add like') alert('좋아요한 상품에 추가되었습니다.')
+      else if (result.data.message === 'cancel like') alert('좋아요한 상품에서 제거되었습니다.')
+    })
+    .catch(err => {
+      alert('에러가 발생했습니다. 잠시 후 다시 시도해 주세요.')
+    }) 
+  }
   return (
     <div>
       {
@@ -13,7 +44,7 @@ export default function RankItem({item, curCategory}) {
           <div className='itemInfo item-price'>{item.price}</div>
           <div className='itemInfo like-count'>{item.ranking_count}</div>
           <div className='itemInfo event-info'>{item.event_info}</div>
-          <div className='itemInfo favorites-item'>⭐</div>
+          <div className='itemInfo favorites-item' onClick={() => itemInfo(item)} >⭐</div>
         </article>
       : 
         <article key={item.id} className="ranking-items">
@@ -24,7 +55,7 @@ export default function RankItem({item, curCategory}) {
           <div className='itemInfo item-price'>{item.price}</div>
           <div className='itemInfo like-count'>{item.ranking_count}</div>
           <div className='itemInfo event-info'>{item.event_info}</div>
-          <div className='favorites-item'>⭐</div>
+          <div className='favorites-item' onClick={() => itemInfo(item)} >⭐</div>
         </article>
       }
     </div>

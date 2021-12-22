@@ -41,10 +41,10 @@ export default function Login(props) {
     .then(response => {
       if (!response.data.accessToken) return alert("ID 또는 PW를 확인하세요")
       else {  // 여기 이 코드 맞나요 이렇게 수정하는게 맞나요??
+        props.setToken(response.data.accessToken)
+        props.handleLogin(true)
         navigate('/')
       }
-      props.setToken(response.data.accessToken)
-      props.handleLogin(true)
     })
     .catch(err => {
       window.alert("ID 또는 PW를 확인하세요")
