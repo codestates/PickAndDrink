@@ -1,11 +1,8 @@
-<<<<<<< HEAD
  import React from "react";
-=======
-import React, {useEffect, useState} from "react";
->>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49
 import "./ItemMain.css";
 import Item from "./Item";
 import Sale from "./Sale"
+import { useEffect, useState } from "react"; 
 import {items} from '../../assets/dummyData'
 import {sales} from '../../assets/dummyData1'
 import axios from "axios";

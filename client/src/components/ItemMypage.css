@@ -1,7 +1,6 @@
 #item-mypage-body{
-<<<<<<< HEAD
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     width: 75%;
     vertical-align: top;
     margin-left: 3vw;
@@ -19,7 +18,7 @@
     /* margin-top: 20px;
     margin-bottom: 100px;
     width:80% */
-    border: 1px solid black;
+    border: 1px solid #ccc;
     width: 80%;
     height: 30%;
     /* margin: 0 7vh 4vh; */
@@ -28,12 +27,13 @@
     display: flex;
 }
 .profile-Img{
+    background-color: #f3f3f3;
     width: 30%;
     /* flex: 0.4; */
     margin: 0px 10% 0px 2%;
     /* display: block; */
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .profile-Img img{
     display: block;
@@ -42,17 +42,40 @@
 }
 .welcome {
     /* flex: 0.4; */
-    border: 1px solid black;
+    padding: 1%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    width: 50%;
+    display:inline-block;
+    height: 20%;
+    text-align: right;
+    font: 1.3em sans-serif;
+    font-weight: bold;
+}
+.userLike{
+    padding: 1%;
+    /* border: 1px solid black; */
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     box-sizing: border-box;
     width: 50%;
     display:inline-block;
     height: 20%;
     text-align: center;
     font: 1.3em sans-serif;
+    font-weight: bold;
 }
+/* .user-like{
+    margin: 0 auto;
+    height: 20%;
+    text-align: center;
+    font: 1.3em sans-serif;
+} */
+
 /*--------------------------------------------*/
 
-.itemList{
+/* .itemList{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -90,27 +113,4 @@
     display: block;
     text-align: center;
     margin: 0 auto;
-=======
-  display: inline-block;
-  border: 1px solid black;
-  width: 75%;
-  vertical-align: top;
-  margin-left: 3vw;
-}
-
-#mypage-Container{
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 200px;
-}
-
-.profile{
-  margin-top: 20px;
-  margin-bottom: 100px;
-  width:80%
-}
-
-.profile-Img{
-  width: 100%;
->>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49
-}
+} */

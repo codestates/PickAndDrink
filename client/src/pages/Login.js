@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from '../components/Footer'
 import '../pages/Login.css'
 import axios from 'axios';
-import Header from '../components/Header'
 import { Link } from 'react-router-dom'
 
 axios.defaults.withCredentials = true;
@@ -53,7 +52,6 @@ export default function Login () {
     <Footer />
     </div>
   );
-<<<<<<< HEAD
 }
     <div>
       <center>
@@ -77,6 +75,3 @@ export default function Login () {
           <div className='alert-box'></div>
       </center>
     </div>
-=======
-}
->>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49

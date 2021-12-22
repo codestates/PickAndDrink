@@ -1,0 +1,41 @@
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------------------------*/
+.like-items{
+    /* border: 1px solid black; */
+    width: 33%;
+    margin: 0 4.5vh 4vh;
+    padding: 20px
+}
+.like-item-img{
+    width: 100%;
+    display: block;
+    border: 1px solid #ccc;
+}
+.like-items img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.like-item{
+    font: 1em sans-serif;
+    text-align: left;
+    font-weight: bold;
+    margin: 1vw 0 0 0.3vw;
+    /* border: 1px solid black; */
+}
+.like-item-price{
+    font: 0.8em sans-serif;
+    text-align: left;
+    margin: 0.3vw 0 0 0.3vw;
+}
+.date{
+    font: 0.8em sans-serif;
+    display: block;
+    text-align: left;
+    margin: 0.3vw 0 0 0.3vw;
+}

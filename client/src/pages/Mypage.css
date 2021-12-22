@@ -1,20 +1,9 @@
 #itemMypage-container{
-<<<<<<< HEAD
     margin: 0 10vw;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     padding: 50px;
 
 }
 /* #itemMypage-container div:nth-child(2){
     text-align: right;
 }  */
-=======
-  margin: 0 10vw;
-  border: 1px solid black;
-  padding: 50px;
-}
-
-/* #itemMypage-container div:nth-child(5) {
-  text-align: right;
-} */
->>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49

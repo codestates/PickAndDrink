@@ -15,8 +15,4 @@ function Sidebar () {
   );
 }
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
-export default Sidebar;
->>>>>>> 86d05ea41b94ad9402ef5c0a8fef63326a6c0e49
