@@ -1,18 +1,25 @@
 #mypage-sidebar-body{
-  display: inline-block;
-  border: 1px solid black;
-  width: 20%;
-  height: 300px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 20%;
+    height: 300px;
 }
 #sidebar-container{
-  list-style: none;
-  font-size: 1.5vw;
-  padding: 0 2vw;
+    list-style: none;
+    font-size: 1.2vw;
+    padding: 0 2vw;
+    font-weight: bold;
+    
 
 }
 .sidebar-category{
-  padding-left: 4px;
-  border-bottom: 1px solid rgb(51, 51, 51);
-  margin-bottom: 2.5vh;
-  margin-top: 3vh;
+    padding-left: 4px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2.5vh;
+    margin-top: 3vh;
+    
+}
+.sidebar-category:nth-child(1){
+    font-size: 1.2vw;
+    font-weight: bold;
 }
