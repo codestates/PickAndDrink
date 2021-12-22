@@ -1,17 +1,10 @@
 #banner {
-<<<<<<< HEAD
   position: relative;
   margin-top: 80px;
   width: 100%;
-=======
-  margin: 0 10vw 50px;
->>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382
   height: 300px;
   border: 1px solid black;
   text-align: center;
   line-height: 300px;
-<<<<<<< HEAD
   margin-bottom: 80px;
-=======
->>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382
 }

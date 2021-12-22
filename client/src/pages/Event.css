@@ -26,7 +26,7 @@ aside li {
   border-bottom: 1px solid rgb(51, 51, 51);
   margin-bottom: 2.5vh;
 }
-
+/*-----------------------------------------------------*/
 #eventListContainer {
   vertical-align: top;
   display: inline-block;
@@ -64,7 +64,7 @@ aside li {
   border: 1px solid black;
   padding: 7vh 0;
 }
-
+/*-----------------------------------------------------*/
 .event {
   border: 1px solid black;
   width: 30%;

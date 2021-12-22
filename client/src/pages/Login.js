@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import '../pages/Login.css'
 import axios from 'axios';
-<<<<<<< HEAD:client/src/pages/login.js
 import Header from '../components/Header'
-=======
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
->>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382:client/src/pages/Login.js
 axios.defaults.withCredentials = true;
 
 //프랍스 이름 다시 정하기
@@ -54,7 +51,6 @@ export default function Login () {
 }
     <div>
       <center>
-<<<<<<< HEAD:client/src/pages/login.js
         <Header />
           <div>
             <span>이메일</span>
@@ -73,11 +69,5 @@ export default function Login () {
             로그인
           </button>
           <div className='alert-box'></div>
-=======
-        <h1>Sign In</h1>
-          <div><span>이메일</span><input type='email'/></div>
-          <div><span>비밀번호</span><input type='password'/></div>
-          <button className='btn btn-login' type='submit'>로그인</button>
->>>>>>> 20ec4cbc7e8157de90edbf909c5bf06c84bd9382:client/src/pages/Login.js
       </center>
     </div>
