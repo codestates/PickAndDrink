@@ -5,8 +5,8 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Signup from './pages/Signup';
 import Ranking from './pages/Ranking';
-import Signin from './pages/Signin';
 import Main from './pages/Main'
+import Search from './pages/Search'
 import axios from 'axios';
 import './App.css';
 
@@ -37,53 +37,23 @@ export default function App () {
 
   const handleLogin = (value) => {
     setIsLogin(value)
-    console.log(value)
   }
 
   const handleAccessToken = (accToken) => { // 액세스토큰 저장
     setAccessToken(accToken)
-    console.log(accToken)
   }
-
-  // const isAuthenticated = () => {
-  //   axios
-  //     .get("https://localhost:3000") 
-  //     .then((res) => {
-  //       setIsLogin(true); 
-  //       setUserinfo(res.data.data.userInfo); 
-  //       history.push("/");
-  //     })
-  //     .catch((err) => {
-  //       console.log("토큰이 만료 되었습니다. 다시 로그인 해 주세요.")
-  //     });
-  //   // TODO: 이제 인증은 성공했습니다. 사용자 정보를 호출하고, 이에 성공하면 로그인 상태를 바꿉시다.
-  // };
-  // const handleResponseSuccess = () => {
-  //   isAuthenticated();
-  // };
-  // const handleLogout = () => {
-  //   axios.post('https://localhost:3000/signout').then((res) => {
-  //     setUserinfo(null);
-  //     setIsLogin(false);
-  //     history.push('/');
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   isAuthenticated();
-  // }, []);
 
   return (
     <div>
 
       <Routes>
         <Route path='/login'element={<Login setToken={handleAccessToken} handleLogin={handleLogin}/>} />
-        <Route path='/'element={<Main isLogin={isLogin} userinfo={userinfo}/>} />
-        <Route path='/mypage'element={<Mypage isLogin={isLogin} userinfo={userinfo} accessToken={accessToken}/>} />
-        <Route path='/event'element={<Event isLogin={isLogin} userinfo={userinfo}/>} />
-        <Route path='/ranking'element={<Ranking isLogin={isLogin} userinfo={userinfo}/>} />
-        <Route path='/signin'element={<Signin isLogin={isLogin} userinfo={userinfo}/>} />
+        <Route path='/'element={<Main isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>} />
+        <Route path='/mypage'element={<Mypage isLogin={isLogin} userinfo={userinfo} accessToken={accessToken} setIsLogin={setIsLogin} />} />
+        <Route path='/event'element={<Event isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>} />
+        <Route path='/ranking'element={<Ranking isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>} />
         <Route path='/signup'element={<Signup isLogin={isLogin} setToken={handleAccessToken} handleLogin={handleLogin} userinfo={userinfo}/>} />
+        <Route path='/search'element={<Search />} />
       </Routes>
 
     </div>

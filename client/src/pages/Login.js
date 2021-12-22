@@ -40,11 +40,11 @@ export default function Login(props) {
     })
     .then(response => {
       if (!response.data.accessToken) return alert("ID 또는 PW를 확인하세요")
-      else {  // 여기 이 코드 맞나요 이렇게 수정하는게 맞나요??
+      else {
+        props.setToken(response.data.accessToken)
+        props.handleLogin(true)
         navigate('/')
       }
-      props.setToken(response.data.accessToken)
-      props.handleLogin(true)
     })
     .catch(err => {
       window.alert("ID 또는 PW를 확인하세요")
@@ -78,22 +78,3 @@ export default function Login(props) {
     </div>
   );
 }
-
-{/* <div>
-  <center>
-    <Header />
-    <div>
-      <span>이메일</span>
-      <input type="email" />
-    </div>
-    <div>
-      <span>비밀번호</span>
-      <input type="password" />
-    </div>
-    <div><Link to='/signup'>회원가입을 하시겠어요?</Link></div>
-    <button className="btn btn-login" type="submit">
-      로그인
-    </button>
-    <div className="alert-box"></div>
-  </center>
-</div>; */}

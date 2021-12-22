@@ -10,7 +10,7 @@
     width: 100%;
     height: auto;
     margin-top: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 .profile{
@@ -65,6 +65,32 @@
     font: 1.3em sans-serif;
     font-weight: bold;
 }
+
+#commentContainer div{
+    width: 80%;
+    margin: 2vw auto;
+}
+
+#deleteContainer {
+    width: 80%;
+    height: 30%;
+    margin: 0 auto 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#deleteContainer h2 {
+    margin-bottom: 40px;
+}
+
+#deleteButton {
+    margin: 0 auto 50px;
+    width: 20%;
+    background-color: #87CEFA;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 /* .user-like{
     margin: 0 auto;
     height: 20%;

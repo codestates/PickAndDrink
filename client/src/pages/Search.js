@@ -9,9 +9,6 @@ export default function Ranking({isLogin, userinfo, setIsLogin}) {
   return (
     <div>
       <Header isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>
-      <div id='ranking-container'>
-        <Itemranking />
-      </div>
       <Footer />
     </div>
   )

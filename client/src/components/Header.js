@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import "../components/Header.css";
 
-function Header({isLogin, userinfo}) {
+function Header({isLogin, userinfo, setIsLogin}) {
   
+  function logOut() {
+    setIsLogin(false)
+  }
+
   return (
     <div id='headerContainer'>
       <header id="header">
@@ -21,7 +25,7 @@ function Header({isLogin, userinfo}) {
           ></input>
         </div>
         {
-          userinfo ? <div id="hello">{userinfo.nickname}님 안녕하세요!</div>
+          userinfo && isLogin ? <div id="hello">{userinfo.nickname}님 안녕하세요!</div>
           : <Link to="/signup"><div id="signup">signup</div></Link>
         }
       </header>
@@ -33,6 +37,10 @@ function Header({isLogin, userinfo}) {
         {
           isLogin ? <Link to="/mypage"><div>Mypage</div></Link>
           : <Link to="/login"><div>Login</div></Link>
+        }
+        {
+          isLogin ? <div id='logOut' onClick={logOut}>LogOut</div>
+          : ''
         }
       </nav>
     </div>
