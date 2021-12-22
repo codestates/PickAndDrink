@@ -14,8 +14,8 @@ router.patch('/auth/me', controllers.me.updateUserInfo)
 router.post('/auth/signup', controllers.signup)
 router.delete('/auth/signout', controllers.signout)
 
-router.get('/auth/oauth', controllers.oauth.githubLogin)
-router.get('/auth/github', controllers.oauth.githubCallBack)
+router.get('/auth/github', controllers.github.githubLogin)
+router.post('/auth/github', controllers.github.githubCallBack)
 
 // comment routing
 router.get('/comment', controllers.comment.getUserComment)

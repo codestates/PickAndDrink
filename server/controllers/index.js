@@ -8,6 +8,6 @@ module.exports = {
     comment: require('./comment'),
     item: require('./item'),
     like: require('./like'),
-    oauth: require('./auth/oauth')
+    github: require('./auth/github')
 
 }
