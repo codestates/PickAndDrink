@@ -24,6 +24,7 @@
 }
 
 .item {
+  /* background-color:#9c5810; */
   position: relative;
   border: 1px solid black;
   width: 16.8vw;
@@ -32,9 +33,10 @@
 }
 
 .itemImg {
+  
   width: 80%;
   height: 70%;
-  margin: 20px auto 0;
+  margin: 10px auto 0;
   border: 1px solid black;
 }
 

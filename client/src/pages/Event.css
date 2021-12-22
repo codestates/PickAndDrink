@@ -26,15 +26,24 @@ aside li {
   border-bottom: 1px solid rgb(51, 51, 51);
   margin-bottom: 2.5vh;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 aside li:hover {
   background-color: #87CEFA;
-  border-radius: 3px;
+  
 }
 
 aside li:active {
   background-color: white;
+}
+
+.submenu {
+  background-color: none;
+}
+
+.focused {
+  background-color: #87CEFA;
 }
 
 #eventListContainer {
@@ -109,6 +118,7 @@ aside li:active {
   text-align: center;
   margin: 1vw 0 0 0;
   border: 1px solid black;
+  padding: 0.4vw;
 }
 
 .eventInfo div {
