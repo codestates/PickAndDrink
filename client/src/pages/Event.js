@@ -17,6 +17,7 @@ export default function Event() {
   const [eventItem, setEventItem] = useState([])
 
   useEffect(() => { // 편의점 음료 특가 페이지가 최초 랜더링시 실행되는 코드, 로직 진짜 이상함..
+    
     if((store === null && event === null) || (store === '전체' && store === '전체')) { // 최초 랜더링과 상태값 2개가 모두 전체일 때 실행되는 코드
       let eventList = []
         eventId.map((eventId) => {

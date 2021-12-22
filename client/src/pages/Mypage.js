@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import ItemMypage from '../components/ItemMypage'
+import ItemMypage from '../components/MyPageComponent/ItemMypage'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/RankingPageComponent/Sidebar'
 import './Mypage.css' 
-import ItemPageBottom from '../components/ItemMypageBottom'
+import ItemPageBottom from '../components/MyPageComponent/ItemMypageBottom'
 
 axios.defaults.withCredentials = true;
 

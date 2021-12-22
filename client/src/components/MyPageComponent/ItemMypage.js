@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ItemMypage.css'
 // import { items } from '../assets/dummyData'
-import Items from './MainPageComponent/Items'
+import Items from '../MainPageComponent/Items'
 import ItemMypageBottom from './ItemMypageBottom';
 
 function ItemMypage () {
@@ -19,18 +19,18 @@ function ItemMypage () {
             </div> 
           </article>
           <div className='userLike'>
-           <article className='user-like'>XXX님의 좋아요 목록</article>
+            <article className='user-like'>XXX님의 좋아요 목록</article>
           </div>
           <ItemMypageBottom />
         </section>
         
         {/* <div> 
           <article className="itemList">
-           {items.map((item) => <Items key={item.id} item={item} />)}
+            {items.map((item) => <Items key={item.id} item={item} />)}
           </article>
         </div>
           {/* </article> */}
-         
+          
         
       </div>
   

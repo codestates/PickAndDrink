@@ -1,11 +1,51 @@
 #item-ranking-body{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+#ranking-nav {
+    border: 1px solid #ccc;
+    list-style: none;
+}
+
+.ranking-ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.rankingListName {
+    width: 100%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.rankingListName li {
+    font-size: 1vw;
+}
+
+.rankingListName:hover {
+    background-color: #87CEFA;
+    border-radius: 3px;
+}
+
+.rankingListName:active {
+    background-color: white;
+}
+
+.ranking-ul li {
+    margin: 2vh 2.5vh;
 }
 
 #ranking-Container{
     border: 1px solid white;
-    padding: 2%;
+    padding: 1% 2% 2% 2%;
+    margin-top: 4vw;
 }
+
 .guide{
     /* border: 1px solid black; */
     border-bottom: 1px solid #ccc; 
@@ -22,8 +62,26 @@
     align-items: center;
 }
 
+.rankList div:first-child .ranking-items .ranking-number::after {
+    content: '🥇';
+}
+
+.rankList div:nth-child(2) .ranking-items .ranking-number::after {
+    content: '🥈';
+}
+
+.rankList div:last-child article:last-child .ranking-number::after {
+    content: '🥉';
+}
+
+.goldMedal::after {
+    content: '🥇';
+    font-size: 3em;
+}
+
 .ranking-items{
     /* border: 1px solid black;     */
+    padding: 5px;
     border-bottom: 1px solid #ccc;
     margin: 0 auto;
     width: 100%;
@@ -80,5 +138,7 @@
 }
 
 .favorites-item {
+    display: inline-block;
     cursor: pointer;
+    padding-right: 2vw;
 }
