@@ -10,7 +10,7 @@ import Main from './pages/Main'
 import axios from 'axios';
 import './App.css';
 
-
+ 
 
 export default function App () {
   
@@ -49,13 +49,13 @@ export default function App () {
     <div>
 
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/event" element={<Event />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/mypage" element={<Mypage />} />
-        <Route path="/ranking" element={<Ranking />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path='/login'element={<Login/>} />
+        <Route path='/'element={<Main/>} />
+        <Route path='/mypage'element={<Mypage/>} />
+        <Route path='/event'element={<Event/>} />
+        <Route path='/ranking'element={<Ranking/>} />
+        <Route path='/signin'element={<Signin/>} />
+        <Route path='/signup'element={<Signup/>} />
       </Routes>
 
     </div>

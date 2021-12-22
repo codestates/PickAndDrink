@@ -1,23 +1,116 @@
 #item-mypage-body{
-  display: inline-block;
-  border: 1px solid black;
-  width: 75%;
-  vertical-align: top;
-  margin-left: 3vw;
-}
-
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 75%;
+    vertical-align: top;
+    margin-left: 3vw;
+  }
+  
 #mypage-Container{
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 200px;
-}
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 200px;
+  }
 
 .profile{
-  margin-top: 20px;
-  margin-bottom: 100px;
-  width:80%
+    /* border:1px solid black; */
+    /* margin-top: 20px;
+    margin-bottom: 100px;
+    width:80% */
+    border: 1px solid #ccc;
+    width: 80%;
+    height: 30%;
+    /* margin: 0 7vh 4vh; */
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+}
+.profile-Img{
+    background-color: #f3f3f3;
+    width: 30%;
+    /* flex: 0.4; */
+    margin: 0px 10% 0px 2%;
+    /* display: block; */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+.profile-Img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.welcome {
+    /* flex: 0.4; */
+    padding: 1%;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    width: 50%;
+    display:inline-block;
+    height: 20%;
+    text-align: right;
+    font: 1.3em sans-serif;
+    font-weight: bold;
+}
+.userLike{
+    padding: 1%;
+    /* border: 1px solid black; */
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    width: 50%;
+    display:inline-block;
+    height: 20%;
+    text-align: center;
+    font: 1.3em sans-serif;
+    font-weight: bold;
+}
+/* .user-like{
+    margin: 0 auto;
+    height: 20%;
+    text-align: center;
+    font: 1.3em sans-serif;
+} */
+
+/*--------------------------------------------*/
+
+/* .itemList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-Img{
-  width: 100%;
+.like-items{
+    border: 1px solid black;
+    width: 30%;
+    margin: 0 7vh 4vh;
+    padding: 20px
 }
+.like-item-img{
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+}
+.like-items img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.like-item{
+    font: 0.5em sans-serif;
+    text-align: center;
+    margin: 1vw 0 0 0;
+    border: 1px solid black;
+}
+.like-item-price{
+    font: 0.5em sans-serif;
+    text-align: center;
+}
+.date{
+    font: 0.5em sans-serif;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+} */

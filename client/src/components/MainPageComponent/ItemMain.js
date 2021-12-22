@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
+ import React from "react";
 import "./ItemMain.css";
 import Item from "./Item";
 import Sale from "./Sale"
+import { useEffect, useState } from "react"; 
 import {items} from '../../assets/dummyData'
 import {sales} from '../../assets/dummyData1'
 import axios from "axios";

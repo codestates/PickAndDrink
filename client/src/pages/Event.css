@@ -36,7 +36,7 @@ aside li:hover {
 aside li:active {
   background-color: white;
 }
-
+/*-----------------------------------------------------*/
 #eventListContainer {
   vertical-align: top;
   display: inline-block;
@@ -85,7 +85,7 @@ aside li:active {
   border: 1px solid black;
   padding: 7vh 0;
 }
-
+/*-----------------------------------------------------*/
 .event {
   border: 1px solid black;
   width: 30%;
