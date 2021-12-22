@@ -1,37 +1,53 @@
-import React, { useState } from 'react';
+// ToDO: 이것도 마찬가지로 로그인 성공하면 메인화면으로 보내주는것만 해주세요
+
+import React, { useState } from "react";
 import Header from "../components/Header";
-import Footer from '../components/Footer'
-import '../pages/Login.css'
-import axios from 'axios';
-import { Link } from 'react-router-dom'
+import Footer from "../components/Footer";
+import "../pages/Login.css";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true; // 오류 해결했씁니다
 
-//프랍스 이름 다시 정하기
-export default function Login () {
-  // const [loginInfo, setLoginInfo] = useState({
-  //   email: '',
-  //   password: ''
-  // });
-  // const [errorMessage, setErrorMessage] = useState('');
-  // const handleInputValue = (key) => (e) => {
-  //   setLoginInfo({ ...loginInfo, [key]: e.target.value });
-  // };
-  // const handleLogin = () => {
-  //   const { email, password } = loginInfo
-  //   if(!email || !password){
-  //     setErrorMessage('이메일과 비밀번호를 입력하세요')
-  //     return;
-  //   }
-  //   axios 
-  //     .post('https://localhost:3000/signup', { email,password 
-  //     })
-  //     .then((res)=> {
-  //       handleResponseSuccess(res)
-  //     })
-    // TODO : 서버에 로그인을 요청하고, props로 전달된 callback을 호출합니다.
-    // TODO : 이메일 및 비밀번호를 입력하지 않았을 경우 에러를 표시해야 합니다.
-  // };
+export default function Login(props) {
+
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = inputs;
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+
+  const PostLogin = () => {
+    const {email, password} = inputs
+
+    if (!email || !password) return alert("ID 혹은 PW를 확인하세요")
+
+    axios({
+      method: 'POST',
+      url: `https://localhost:8443/auth/login`,
+      headers: {
+        accept: 'application/json',
+      },
+      data: { email, password }
+    })
+    .then(response => {
+      if (!response.data.accessToken) return alert("ID 또는 PW를 확인하세요")
+      props.setToken(response.data.accessToken)
+      props.handleLogin(true)
+    })
+    .catch(err => {
+      window.alert("ID 또는 PW를 확인하세요")
+    })
+  }
+
   return (
     <div>
     <Header />
@@ -40,38 +56,40 @@ export default function Login () {
           {/* <img src='/images/blueCat.png' alt='' /> */}
           <img src='/images/logo.png' alt='' />
         </div>
-      <h1>로그인</h1>
-      <p>아직 회원이 아니신가요? <Link to='/signin'>회원가입 하기</Link></p>
-        <div id='inputContainer'>
-          <div><input className='loginInput' type='email'placeholder='이메일'/></div>
-          <div><input className='loginInput' type='password' placeholder='비밀번호'/></div>
+        <h1>로그인</h1>
+        <p>
+          아직 회원이 아니신가요?<Link to="/signup">회원가입</Link> {/*Signup 주소 변경함*/}
+        </p>
+        <div id="inputContainer">
+          <div>
+            <input className="loginInput" type="email" placeholder="이메일" onChange={onChange} name="email" value={email} />
+          </div>
+          <div>
+            <input className="loginInput" type="password" placeholder="비밀번호" onChange={onChange} name="password" value={password}/>
+          </div>
         </div>
-        <button id='loginButton'>Login</button>
-          <div id='Oauth'>Oauth</div>
-    </div>
-    <Footer />
+        <button id="loginButton" onClick={PostLogin}>Login</button>
+        <div id="Oauth">Oauth</div>
+      </div>
+      <Footer />
     </div>
   );
 }
+<div>
+  <center>
+    <Header />
     <div>
-      <center>
-        <Header />
-          <div>
-            <span>이메일</span>
-            <input type='email'/>
-          </div>
-          <div>
-            <span>비밀번호</span>
-            <input
-              type='password'
-            />
-          </div>
-          <div>
-            {/* <Link to='/signup'>회원가입을 하시겠어요?</Link> */}
-          </div>
-          <button className='btn btn-login' type='submit'>
-            로그인
-          </button>
-          <div className='alert-box'></div>
-      </center>
+      <span>이메일</span>
+      <input type="email" />
     </div>
+    <div>
+      <span>비밀번호</span>
+      <input type="password" />
+    </div>
+    <div>{/* <Link to='/signup'>회원가입을 하시겠어요?</Link> */}</div>
+    <button className="btn btn-login" type="submit">
+      로그인
+    </button>
+    <div className="alert-box"></div>
+  </center>
+</div>;
