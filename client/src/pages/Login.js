@@ -37,7 +37,7 @@ export default function Login () {
     <Header />
     <div id='loginPageContainer'>
         <div id='loginImg'>
-          <img src='/images/blueCat.png' alt='' />
+          {/* <img src='/images/blueCat.png' alt='' /> */}
           <img src='/images/logo.png' alt='' />
         </div>
       <h1>로그인</h1>

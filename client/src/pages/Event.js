@@ -33,23 +33,23 @@ export default function Event() {
           }
         })
       })
-    }  else { // 여기는 store와 event 2개의 쿼리를 한꺼번에 보내야하는데 그 API는 없는?
-      
-      
+    }  else { // 리팩토링
+      axios.get(`https://localhost:8443/item?store-name=${store}&event-info=${event}`)
+      .then((res) => {
+        setEventItem(res.data.data)
+      })
     }
+    // console.log(store, event)
+  }, [store, event])
 
-
-    // console.log(store)
-    // console.log(event)
-  },[store, event])
-
-  function getStore(storeName) { // setState의 비동기성 이해 후 리팩토링
+  function getStore(storeName) {
     setStore(storeName)
-    // 편의점이 바뀔 때마다(사이드바를 누를 때 마다) axios요청 후 데이터 받아오고 렌더링 해야함
-    // store라는 상태가 바뀔 때마다 axios요청을 해야하는데 이건 useEffect에서 처리해야하는 걸까?
   }
 
-  function getEvent(eventName) { // setState의 비동기성 이해 후 리팩토링
+  function getEvent(eventName) {
+    if(eventName ==='1 + 1') eventName = 1
+    else if(eventName==='2 + 1') eventName = 2
+    else if(eventName==='금액 할인') eventName = 3
     setEvent(eventName)
   }
 
