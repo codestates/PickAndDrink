@@ -13,6 +13,9 @@ router.get('/auth/me', controllers.me)
 router.post('/auth/signup', controllers.signup)
 router.delete('/auth/signout', controllers.signout)
 
+router.get('/auth/oauth', controllers.oauth.githubLogin)
+router.get('/auth/github', controllers.oauth.githubCallBack)
+
 // comment routing
 router.get('/comment', controllers.comment.getUserComment)
 router.get('/comment/:id', controllers.comment.getItemComment)
