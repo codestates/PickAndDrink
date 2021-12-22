@@ -1,12 +1,20 @@
 import React from 'react';
 import axios from 'axios';
-
+import ItemMypage from '../components/ItemMypage'
+import Header from '../components/Header'
+import Sidebar from '../components/Sidebar'
+import './Mypage.css' 
 
 axios.defaults.withCredentials = true;
 
 function Mypage (props) { 
   return (
     <div>
+      <Header />
+      <div id='itemMypage-container'>
+        <Sidebar/>
+        <ItemMypage /> 
+
       {/* {!props.userinfo ?  <div></div>  
       : (
       <center>
@@ -19,9 +27,9 @@ function Mypage (props) {
         </button>
       </center>
         )} */}
+      </div>
     </div>
   );
 }
 
 export default Mypage;
-

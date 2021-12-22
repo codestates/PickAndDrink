@@ -1,8 +1,4 @@
 #loginPageContainer {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 40%;
   border: 1px solid black;
   text-align: center;
@@ -12,6 +8,7 @@
 #loginPageContainer p a {
   text-decoration: underline;
   text-underline-position: under;
+  color: #35a8f0;
 }
 
 #loginImg {
@@ -54,16 +51,10 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  background-color: rgb(233, 230, 230);
 }
 
 #loginButton:active {
-  border: 1px solid black;
-}
-
-#test {
-  
-}
-
-#test div{
-  display: inline-block;
+  background-color: #87CEFA;
+  color: white;
 }
