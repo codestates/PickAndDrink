@@ -10,7 +10,7 @@ import axios from "axios";
 
 axios.defaults.withCredentials = false;
 
-function ItemMain() {
+function ItemMain({setToken}) {
 
   const category = ['탄산음료', '커피', '건강음료', '유제품', '전통음료', '물', '과채음료']
   const eventId = [1, 2]
@@ -70,7 +70,7 @@ function ItemMain() {
           <h1 className='mainH'>픽냥이's 랭킹 Pick❗</h1>
        </div>  
         <section id="rankList">
-          {firstItem.map((item) => <Item key={item.id} item={item} openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} modalItem={modalItem} />)}
+          {firstItem.map((item) => <Item key={item.id} item={item} setToken={setToken}  openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} modalItem={modalItem} />)}
         </section>
       </div>
 
