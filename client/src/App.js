@@ -17,6 +17,9 @@ export default function App () {
   const [userinfo, setUserinfo] = useState(null); // 개인정보 저장
   const [accessToken, setAccessToken] = useState(null) // 액세스토큰: null/accToken
   const history = useNavigate(); // Signup, login 페이지 연결 부탁드립니다.
+  
+  const url = new URL(window.location.href)
+  const [authorizationCode, setAuthorizationCode] =useState(url.searchParams.get('code'))
 
   useEffect(() => {
     if(isLogin) {
@@ -34,12 +37,32 @@ export default function App () {
     }
   },[isLogin])
 
+  useEffect(()=> {
+    if (authorizationCode) {
+      getGoogleAccessToken(authorizationCode)
+    }
+  },[authorizationCode])
+
   const handleLogin = (value) => {
     setIsLogin(value)
   }
 
   const handleAccessToken = (accToken) => { // 액세스토큰 저장
     setAccessToken(accToken)
+  }
+
+  const getGoogleAccessToken = (authorizationCode) => {
+    //! 서버의 해당 엔드포인트로 authorization code를 보내주고 access token을 받아옴
+    axios
+    .post('https://localhost:8443/auth/googleCallback', {
+      // 전달할 데이터 부분
+      authorizationCode
+    })
+    .then((result) => {
+      // console.dir(result)
+      setAccessToken(result.data.accessToken)
+      setIsLogin(true);
+    })
   }
 
   return (

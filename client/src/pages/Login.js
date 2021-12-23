@@ -51,6 +51,10 @@ export default function Login(props) {
     })
   }
 
+  const onClickGoogle = () => {
+    window.location.href = `https://localhost:8443/auth/google`;
+  };
+
   return (
     <div>
     <Header />
@@ -72,7 +76,11 @@ export default function Login(props) {
           </div>
         </div>
         <button id="loginButton" onClick={PostLogin}>Login</button>
-        <div id="Oauth">Oauth</div>
+        <div id="Oauth">
+          <button id="googleButton" onClick={onClickGoogle}>
+            <img className="googleImg" src='/images/googleOauth.png' alt='구글Oauth'/>
+          </button>
+        </div>
       </div>
       <Footer />
     </div>
