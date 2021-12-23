@@ -26,7 +26,7 @@ function Mypage ({isLogin, userinfo, accessToken, setIsLogin}) {
     }
   }
   
-  console.log(curPage)
+
 
   return (
     <div>

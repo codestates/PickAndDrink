@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from 'axios'
+import Modal from "../Modal";
 
-export default function Item({item, setToken, itemRefresh, isMypage}) {
+export default function Item({item, setToken, itemRefresh, isMypage, openModalHandler, isOpen, curItemId, modalItem}) {
   // isMypage는 할당되지 않은 경우(undefined) falsy한 값이므로 하단 구현문이 동작할때 Mypage일때만 상품의 정보를 가져옵니다
 
   const storeName = {
@@ -17,7 +18,8 @@ export default function Item({item, setToken, itemRefresh, isMypage}) {
     2: '2+1'
   }
 
-  const postLike = (item) => {
+  const postLike = (event, item) => { // 모달창 이벤트 버블링 막기 위해 event를 받아옴
+    event.stopPropagation()
     axios({
       method: 'POST',
       url: `https://localhost:8443/like/${item.id}`,
@@ -38,13 +40,12 @@ export default function Item({item, setToken, itemRefresh, isMypage}) {
   }
 
   return (
-      <article key={item.id} className="item">
+      <article key={item.id} className="item" onClick={() => openModalHandler(item)}>
         <div className="itemImg">
           <img src={item.img} alt="" />
         </div>
-
         <div className='rankItemInfo'>
-          <div className='emoji' onClick={() => postLike(item)}>⭐</div>
+          <div className='emoji' onClick={(event) => postLike(event, item)}>⭐</div>
           {isMypage ? 
           <div>
             <span>{storeName[item.storeId]}|</span><span>{eventName[item.eventId]}|</span><span>{item.price}원</span>

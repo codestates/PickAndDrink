@@ -5,6 +5,7 @@ import Sale from "./Sale"
 import { useEffect, useState } from "react"; 
 // import {items} from '../../assets/dummyData'
 // import {sales} from '../../assets/dummyData1'
+import Modal from "../Modal";
 import axios from "axios";
 
 axios.defaults.withCredentials = false;
@@ -14,10 +15,19 @@ function ItemMain({setToken}) {
   const category = ['탄산음료', '커피', '건강음료', '유제품', '전통음료', '물', '과채음료']
   const eventId = [1, 2]
 
+  const [curItemId, setCurItemId] = useState(null)
   const [firstItem, setFirstItem] = useState([])
   const [eventInfo, setEventInfo] = useState([])
+  const [isOpen, setIsOpen] = useState(false)
+  const [modalItem, setModalItem] = useState()
+
+  function openModalHandler(item) {
+    setIsOpen(!isOpen)
+    setCurItemId(item.id)
+    setModalItem(item)
+  }
   
-  useEffect(() => { // <= 여기 로직 진짜 개이상함..
+  useEffect(() => {
     let categoryArr = []
     let eventArr = []
 
@@ -48,7 +58,10 @@ function ItemMain({setToken}) {
 
   return (
     <div id='itemMainContainer'>
-
+      {
+      isOpen ? <Modal isOpen={isOpen} curItemId={curItemId} openModalHandler={openModalHandler} modalItem={modalItem}/>
+      : ''
+      }
       <div id="rankContainer">
        <div className="pick">
         <div className="pick-img">
@@ -57,7 +70,7 @@ function ItemMain({setToken}) {
           <h1 className='mainH'>픽냥이's 랭킹 Pick❗</h1>
        </div>  
         <section id="rankList">
-          {firstItem.map((item) => <Item key={item.id} item={item} setToken={setToken} />)}
+          {firstItem.map((item) => <Item key={item.id} item={item} setToken={setToken}  openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} modalItem={modalItem} />)}
         </section>
       </div>
 
@@ -70,7 +83,7 @@ function ItemMain({setToken}) {
           <h1 className='mainH1'>할인 상품이에요❗</h1>
         </div>
         <section id="saleList">
-          {eventInfo.map((sale) => <Sale key={sale[0].id} sale={sale[0]} />)} {/* 이부분 이벤트별로 0번째 정보들만 랜더링해주는데 더 랜더링되게 할 수 없을까? */}
+          {eventInfo.map((sale) => <Sale key={sale[0].id} sale={sale[0]} openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} />)} {/* 이부분 이벤트별로 0번째 정보들만 랜더링해주는데 더 랜더링되게 할 수 없을까? */}
         </section>
       </div>
       
