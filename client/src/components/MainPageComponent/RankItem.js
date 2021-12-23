@@ -41,8 +41,8 @@ export default function RankItem({isLogin, setToken, item, curCategory}) {
           <div className="ranking-item-img"><img src={item.img} alt="" /></div>
           <div className="itemInfo item-name">{item.name}</div>
           <div className='itemInfo item-store'>{item.store_name}</div>
-          <div className='itemInfo item-price'>{item.price}</div>
-          <div className='itemInfo like-count'>{item.ranking_count}</div>
+          <div className='itemInfo item-price'>{item.price}원</div>
+          <div className='itemInfo like-count'>👍&emsp;{item.ranking_count}</div>
           <div className='itemInfo event-info'>{item.event_info}</div>
           <div className='itemInfo favorites-item' onClick={() => itemInfo(item)} >⭐</div>
         </article>
@@ -52,8 +52,8 @@ export default function RankItem({isLogin, setToken, item, curCategory}) {
           <div className="ranking-item-img"><img src={item.img} alt="" /></div>
           <div className="itemInfo item-name">{item.name}</div>
           <div className='itemInfo item-store'>{item.store_name}</div>
-          <div className='itemInfo item-price'>{item.price}</div>
-          <div className='itemInfo like-count'>{item.ranking_count}</div>
+          <div className='itemInfo item-price'>{item.price}원</div>
+          <div className='itemInfo like-count'>👍&emsp;{item.ranking_count}</div>
           <div className='itemInfo event-info'>{item.event_info}</div>
           <div className='favorites-item' onClick={() => itemInfo(item)} >⭐</div>
         </article>
