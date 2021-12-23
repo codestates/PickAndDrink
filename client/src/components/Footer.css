@@ -1,0 +1,34 @@
+#footer {
+  border-top: 1px solid #ccc;
+  /* border-bottom: 1px solid black; */
+  height: 100px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.repository{
+  font-weight: bold;
+  margin-right: 0.5%;
+}
+.git{
+  margin-right: 43%;
+}
+.lee{
+  margin-right: 0.7%;
+  font-weight: bold;
+}
+.kim{
+  margin-right: 0.7%;
+  font-weight: bold;
+}
+.min{
+  margin-right: 0.7%;
+  font-weight: bold;
+}
+.song{
+  margin-right: 0.7%;
+  font-weight: bold;
+}
