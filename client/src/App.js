@@ -5,8 +5,8 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Signup from './pages/Signup';
 import Ranking from './pages/Ranking';
+import Search from './pages/Search';
 import Main from './pages/Main'
-import Search from './pages/Search'
 import axios from 'axios';
 import './App.css';
 

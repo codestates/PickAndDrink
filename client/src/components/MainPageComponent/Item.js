@@ -49,7 +49,7 @@ export default function Item({item, setToken, itemRefresh, isMypage}) {
           <div>
             <span>{storeName[item.storeId]}|</span><span>{eventName[item.eventId]}|</span><span>{item.price}원</span>
           </div> 
-          : <div>{item.category}1등</div>}
+          :<div className="category-name">{item.category}1등</div>}
           <h2 >{item.name}</h2>
         </div>
       </article>
