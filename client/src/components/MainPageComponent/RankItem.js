@@ -6,13 +6,13 @@ export default function RankItem({isLogin, setToken, item, curCategory}) {
   const navigate = useNavigate()
 
   const itemInfo = (e) => {
-    console.log(e.id) // 클릭한 아이템 id 받기
-    console.log(setToken) // 현재 액세스
+    // console.log(e.id) // 클릭한 아이템 id 받기
+    // console.log(setToken) // 현재 액세스
     const id = e.id
 
     if (!isLogin) {
       alert('먼저 로그인하세요!')
-      navigate('/login')
+      return navigate('/login')
     }
 
     axios({

@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import "./Event.css"
 import axios from "axios";
 
-export default function Event({isLogin, userinfo, setIsLogin}) {
+export default function Event({isLogin, userinfo, setIsLogin, setToken}) {
   const [store, setStore] = useState("전체")
   const [event, setEvent] = useState("전체")
   const [eventItem, setEventItem] = useState([])
@@ -47,7 +47,7 @@ export default function Event({isLogin, userinfo, setIsLogin}) {
         <section id="eventListContainer">
           <Nav getEvent={getEvent}/>
           <article key={sales[0].id} id='eventList'>
-            {eventItem.map((sale) => <Item key={sale.id} item={sale} />)}
+            {eventItem.map((sale) => <Item key={sale.id} item={sale} isLogin={isLogin} setToken={setToken} />)}
           </article>
       </section>
     </div>

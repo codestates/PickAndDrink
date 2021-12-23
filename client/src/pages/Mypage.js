@@ -16,7 +16,7 @@ function Mypage ({isLogin, userinfo, accessToken, setIsLogin}) {
 
   function pageRender() {
     if(curPage === '즐겨찾기') {
-      return <ItemMypage userinfo={userinfo} accessToken={accessToken}/>
+      return <ItemMypage userinfo={userinfo} setToken={accessToken}/>
     }
     else if(curPage === 'comment') {
       return <Comment accessToken={accessToken} comments={comments} userinfo={userinfo}/>

@@ -5,8 +5,6 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Signup from './pages/Signup';
 import Ranking from './pages/Ranking';
-import Signin from './pages/Signin';
-import Search from './pages/Search';
 import Main from './pages/Main'
 import Search from './pages/Search'
 import axios from 'axios';
@@ -15,9 +13,6 @@ import './App.css';
 
 
 export default function App () {
-
-  const [text, setText] = useState('')
-  
   const [isLogin, setIsLogin] = useState(false); // 로그인 여부: true/fale로 구분
   const [userinfo, setUserinfo] = useState(null); // 개인정보 저장
   const [accessToken, setAccessToken] = useState(null) // 액세스토큰: null/accToken
@@ -52,9 +47,9 @@ export default function App () {
 
       <Routes>
         <Route path='/login'element={<Login setToken={handleAccessToken} handleLogin={handleLogin}/>} />
-        <Route path='/'element={<Main isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>} />
+        <Route path='/'element={<Main isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin} setToken={accessToken} />} />
         <Route path='/mypage'element={<Mypage isLogin={isLogin} userinfo={userinfo} accessToken={accessToken} setIsLogin={setIsLogin} />} />
-        <Route path='/event'element={<Event isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin}/>} />
+        <Route path='/event'element={<Event isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin} setToken={accessToken} />} />
         <Route path='/ranking'element={<Ranking isLogin={isLogin} userinfo={userinfo} setIsLogin={setIsLogin} setToken={accessToken}/>} />
         <Route path='/signup'element={<Signup isLogin={isLogin} setToken={handleAccessToken} handleLogin={handleLogin} userinfo={userinfo}/>} />
         <Route path='/search'element={<Search isLogin={isLogin} setToken={accessToken} userinfo={userinfo}/>} /> 
