@@ -6,7 +6,7 @@ function Banner() {
 
   return (
     <div id='banner'>
-      배너정보
+      <img src='/images/drink.jpeg'alt=''/>
     </div>
   );
 }

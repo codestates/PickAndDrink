@@ -60,6 +60,7 @@
 #signup:active {
   background-color: white;
 }
+/*--------------------------------------------------*/
 #menu {
   font-size: 1vw;
   padding: 0 20vw;
@@ -82,7 +83,7 @@
 }
 
 #hello {
-  font-size: 1.2vw;
+  font-size: 1vw;
   text-align: center;
 }
 

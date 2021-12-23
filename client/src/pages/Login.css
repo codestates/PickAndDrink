@@ -1,6 +1,6 @@
 #loginPageContainer {
   width: 40%;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   text-align: center;
   padding: 2vw;
   margin: 0 auto 10vh;
@@ -16,7 +16,13 @@
   margin: 0 auto;
   width: 50%;
 }
-
+.logins{
+  font-size: 1.7em;
+  margin-bottom: 15%;
+}
+.text{
+  font-size: 1em;
+}
 /* #loginImg:nth-child(1) {
   width: 30%;
 }

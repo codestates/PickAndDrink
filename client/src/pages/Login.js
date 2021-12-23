@@ -59,8 +59,8 @@ export default function Login(props) {
           {/* <img src='/images/blueCat.png' alt='' /> */}
           <img src='/images/logo.png' alt='' />
         </div>
-        <h1>로그인</h1>
-        <p>
+        <h1 className="logins">로그인</h1>
+        <p className="text">
           아직 회원이 아니신가요?<Link to="/signup">회원가입</Link> {/*Signup 주소 변경함*/}
         </p>
         <div id="inputContainer">
