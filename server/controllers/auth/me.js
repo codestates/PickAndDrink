@@ -10,14 +10,14 @@ module.exports = {
     }
     
     else{
-    
+        // console.log(req.headers)
         const accessTokenData = chkValid(req);
     
         if(accessTokenData===null){
             res.status(401).send({ message: "Invalid token" }); 
           }
     
-        //   console.log(accessTokenData)
+          // console.log(accessTokenData)
           const {email} = accessTokenData;
     
           user.findOne({ where: {email} })

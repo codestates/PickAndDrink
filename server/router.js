@@ -31,8 +31,8 @@ router.get('/like', controllers.like.findLike)
 router.post('/like/:id', controllers.like.postLike)
 
 //Oauth 2.0 login
-router.post('/auth/google', controllers.googleLogin)
-
+router.post('/auth/googleCallback', controllers.googleOauth.googleCallback)
+router.get('/auth/google', controllers.googleOauth.googleLogin)
 
 router.get('/', (req, res) => {
     res.status(200).send("Welcome to PickAndDrink API Server!")

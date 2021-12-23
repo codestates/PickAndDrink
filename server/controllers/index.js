@@ -9,5 +9,5 @@ module.exports = {
     item: require('./item'),
     like: require('./like'),
     github: require('./auth/github'),
-    googleLogin: require('./auth/google')
+    googleOauth: require('./auth/google')
 }

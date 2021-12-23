@@ -67,3 +67,14 @@
   background-color: #87CEFA;
   color: white;
 }
+
+#googleButton{
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 40px;
+}
+.googleImg{
+  width: 90%;
+  height: 90%;
+}
