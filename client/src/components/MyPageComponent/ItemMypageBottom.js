@@ -4,13 +4,13 @@ import './ItemMypageBottom.css'
 import Items from '../MainPageComponent/Item'
 
 
-function ItemMypageBottom ({likeItem}) {
+function ItemMypageBottom ({likeItem, setToken, itemRefresh, isMypage}) {
 
   return (
         
         <div> 
           <article className="itemList">
-            {likeItem.map((item) => <Items key={item.id} item={item} />)}
+            {likeItem.map((item) => <Items key={item.id} item={item} setToken={setToken} itemRefresh={itemRefresh} isMypage={isMypage} />)}
           </article>
         </div>
 

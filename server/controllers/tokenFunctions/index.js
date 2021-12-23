@@ -32,7 +32,7 @@ module.exports = {
       return verify(token, process.env.ACCESS_SECRET);
     } catch (err) {
       console.log("액세스 토큰 확인 에러");
-      return null;
+      return err; // 자꾸 서버 킬되서 약간 수정
     }
   },
   // chkRefreshToken 함수 > null 반환은 falsy
