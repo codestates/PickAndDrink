@@ -44,7 +44,7 @@ export default function RankItem({isLogin, setToken, item, curCategory}) {
           <div className='itemInfo item-price'>{item.price}원</div>
           <div className='itemInfo like-count'>👍&emsp;{item.ranking_count}</div>
           <div className='itemInfo event-info'>{item.event_info}</div>
-          <div className='itemInfo favorites-item' onClick={() => itemInfo(item)} >⭐</div>
+          <span className='favorites-item' onClick={() => itemInfo(item)} >⭐</span>
         </article>
       : 
         <article key={item.id} className="ranking-items">

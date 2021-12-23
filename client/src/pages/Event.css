@@ -158,6 +158,7 @@ aside li:active {
   padding-left: 30px;
   font-size: 1.5vh;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .eventInfo div:last-child {
