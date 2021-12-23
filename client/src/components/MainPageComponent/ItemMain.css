@@ -154,6 +154,7 @@ article h2 {
   position: absolute;
   left: 1.5vw;
   font-size: 2vw;
+  cursor: pointer;
 }
 .category-name{
   font-weight: bold;

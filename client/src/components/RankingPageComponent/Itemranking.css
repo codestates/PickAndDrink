@@ -142,5 +142,5 @@
 .favorites-item {
     display: inline-block;
     cursor: pointer;
-    padding-right: 2vw;
+    margin-right: 2vw;
 }
