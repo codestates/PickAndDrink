@@ -21,6 +21,7 @@
     text-align: center;
     display: block;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .rankingListName li {
@@ -112,22 +113,23 @@
 }
 
 .item-name{
-    font-size: 1.1em;
+    font-size: 0.9em;
     text-align: left;
     width: 15%;
     height: 50%;
     margin-left: 30px;
+    font-weight: bold;
 }
 
 .item-price{
     /* border: 1px solid black; */
-    font-size: 1.1em;
+    font-size: 1em;
     width: 15%;
 }
 
 .item-store{
     /* border: 1px solid black; */
-    font-size: 1.1em;
+    font-size: 1em;
     width: 15%;
 }
 

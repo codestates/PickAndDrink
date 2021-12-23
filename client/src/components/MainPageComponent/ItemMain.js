@@ -63,7 +63,12 @@ function ItemMain() {
       : ''
       }
       <div id="rankContainer">
-        <h1 className='mainH'>픽냥이's 랭킹 Pick❗</h1>
+       <div className="pick">
+        <div className="pick-img">
+          <img src="/images/cat.png" alt=""/>
+        </div>  
+          <h1 className='mainH'>픽냥이's 랭킹 Pick❗</h1>
+       </div>  
         <section id="rankList">
           {firstItem.map((item) => <Item key={item.id} item={item} openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} modalItem={modalItem} />)}
         </section>
@@ -71,7 +76,12 @@ function ItemMain() {
 
 
       <div id="saleContainer">
-        <h1 className='mainH'>할인 상품이에요❗</h1>
+        <div className="pick">
+        <div className="pick-img">
+          <img src="/images/cat.png" alt=""/>
+        </div>  
+          <h1 className='mainH1'>할인 상품이에요❗</h1>
+        </div>
         <section id="saleList">
           {eventInfo.map((sale) => <Sale key={sale[0].id} sale={sale[0]} openModalHandler={openModalHandler} isOpen={isOpen} curItemId={curItemId} />)} {/* 이부분 이벤트별로 0번째 정보들만 랜더링해주는데 더 랜더링되게 할 수 없을까? */}
         </section>
