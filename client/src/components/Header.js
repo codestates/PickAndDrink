@@ -6,8 +6,9 @@ function Header({isLogin, userinfo, setIsLogin}) {
   const [word, setWord] = useState()
   const navigate = useNavigate()
 
-  function logOut() {
+  function LogOut() {
     setIsLogin(false)
+    navigate('/')
   }
 
   const gotoSearch = () => {
@@ -48,7 +49,7 @@ function Header({isLogin, userinfo, setIsLogin}) {
           : <Link to="/login"><div>Login</div></Link>
         }
         {
-          isLogin ? <div id='logOut' onClick={logOut}>LogOut</div>
+          isLogin ? <div id='logOut' onClick={LogOut}>LogOut</div>
           : ''
         }
       </nav>

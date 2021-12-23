@@ -51,9 +51,9 @@ export default function Itemranking ({isLogin, setToken}) {
       </nav>
 
         <section id="ranking-Container">
-          {/* <article className="guide">
+          {/* <div className="guide">
               <h1>...총 몇개의 상품이 있습니다.</h1>
-          </article> */}
+          </div> */}
 
           <div className='rankList'>
           {firstItem.map((item) => <RankItem isLogin={isLogin} setToken={setToken} curCategory={curCategory} key={item.id} item={item} />)}
